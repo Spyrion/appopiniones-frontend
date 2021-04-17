@@ -7,13 +7,13 @@
 
 import UIKit
 
-class UserDetailViewController: UIViewController {
+class UserDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var userDetailImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var creationDateLabel: UILabel!
     @IBOutlet weak var numberMessagesLabel: UILabel!
-    @IBOutlet weak var changePhotoLabel: UILabel!
+    @IBOutlet weak var changePhotoButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class UserDetailViewController: UIViewController {
         userDetailImageView.layer.cornerRadius = 120
         
         // TODO: habilitar el botón cuando el usuario pueda cambiar o no la foto
-        changePhotoLabel.text = "Cambiar foto"
+        changePhotoButton.setTitle("Cambiar foto", for: .normal)
         
         // TODO: recuperar el nombre del usuario
         userNameLabel.text = "AitorTilla"
@@ -34,6 +34,20 @@ class UserDetailViewController: UIViewController {
     }
     
 
+    @IBAction func changePhoto(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .photoLibrary
+        present(picker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.originalImage] as! UIImage
+        // TODO: volcar la imagen elegida en backend
+        userDetailImageView.image = image
+        
+        dismiss(animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

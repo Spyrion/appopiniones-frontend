@@ -23,12 +23,6 @@
                                     <constraint firstAttribute="height" constant="240" id="n2L-76-awC"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbI-q9-er9">
-                                <rect key="frame" x="285.5" y="428" width="41.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemBlueColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Z7O-az-VOH">
                                 <rect key="frame" x="87" y="458" width="240" height="54"/>
                                 <subviews>
@@ -60,22 +54,29 @@
                                     <constraint firstItem="OhO-AV-YYj" firstAttribute="leading" secondItem="Z7O-az-VOH" secondAttribute="leading" id="s3I-6w-vh6"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ke-Aj-5rr">
+                                <rect key="frame" x="281" y="428" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="changePhoto:" destination="NzN-3U-64f" eventType="touchUpInside" id="xjd-C7-G2f"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ilA-u2-8zB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Z7O-az-VOH" firstAttribute="trailing" secondItem="pka-eN-2yk" secondAttribute="trailing" id="8rj-MA-1bn"/>
                             <constraint firstItem="pka-eN-2yk" firstAttribute="top" secondItem="ilA-u2-8zB" secondAttribute="top" constant="134" id="QTq-yG-xKq"/>
+                            <constraint firstItem="4Ke-Aj-5rr" firstAttribute="trailing" secondItem="pka-eN-2yk" secondAttribute="trailing" id="ZEI-eP-GC3"/>
                             <constraint firstItem="Z7O-az-VOH" firstAttribute="top" secondItem="pka-eN-2yk" secondAttribute="bottom" constant="40" id="axw-ck-VRM"/>
+                            <constraint firstItem="4Ke-Aj-5rr" firstAttribute="top" secondItem="pka-eN-2yk" secondAttribute="bottom" constant="10" id="ePJ-lA-J2W"/>
                             <constraint firstItem="Z7O-az-VOH" firstAttribute="leading" secondItem="pka-eN-2yk" secondAttribute="leading" id="hF7-W5-Wl6"/>
                             <constraint firstItem="ilA-u2-8zB" firstAttribute="bottom" secondItem="Z7O-az-VOH" secondAttribute="bottom" constant="350" id="hIn-pu-ZeA"/>
-                            <constraint firstItem="IbI-q9-er9" firstAttribute="top" secondItem="pka-eN-2yk" secondAttribute="bottom" constant="10" id="sRm-rD-8IG"/>
                             <constraint firstItem="pka-eN-2yk" firstAttribute="centerX" secondItem="VCM-jm-PWC" secondAttribute="centerX" id="tHS-qh-xW6"/>
-                            <constraint firstItem="IbI-q9-er9" firstAttribute="trailing" secondItem="pka-eN-2yk" secondAttribute="trailing" id="uat-eS-s25"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="changePhotoLabel" destination="IbI-q9-er9" id="aRg-za-W0o"/>
+                        <outlet property="changePhotoButton" destination="4Ke-Aj-5rr" id="fuM-lW-9aI"/>
                         <outlet property="creationDateLabel" destination="ry3-UW-slN" id="oCf-Rm-TNF"/>
                         <outlet property="numberMessagesLabel" destination="OhO-AV-YYj" id="WVn-sw-Mf3"/>
                         <outlet property="userDetailImageView" destination="pka-eN-2yk" id="wD5-21-NVK"/>
@@ -91,9 +92,6 @@
         <image name="user_placeholder" width="600" height="600"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
