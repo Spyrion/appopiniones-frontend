@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NzN-3U-64f">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NzN-3U-64f">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--User Detail View Controller-->
+        <!--View Controller-->
         <scene sceneID="rUB-fT-iE5">
             <objects>
-                <viewController id="NzN-3U-64f" customClass="UserDetailViewController" customModule="App_Opiniones" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NzN-3U-64f" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VCM-jm-PWC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,9 +57,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ke-Aj-5rr">
                                 <rect key="frame" x="281" y="428" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="changePhoto:" destination="NzN-3U-64f" eventType="touchUpInside" id="xjd-C7-G2f"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ilA-u2-8zB"/>
@@ -75,17 +72,10 @@
                             <constraint firstItem="pka-eN-2yk" firstAttribute="centerX" secondItem="VCM-jm-PWC" secondAttribute="centerX" id="tHS-qh-xW6"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="changePhotoButton" destination="4Ke-Aj-5rr" id="fuM-lW-9aI"/>
-                        <outlet property="creationDateLabel" destination="ry3-UW-slN" id="oCf-Rm-TNF"/>
-                        <outlet property="numberMessagesLabel" destination="OhO-AV-YYj" id="WVn-sw-Mf3"/>
-                        <outlet property="userDetailImageView" destination="pka-eN-2yk" id="wD5-21-NVK"/>
-                        <outlet property="userNameLabel" destination="gLv-CY-QVs" id="FFr-vb-HaQ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z1v-kA-Hv3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="220.28985507246378" y="88.392857142857139"/>
+            <point key="canvasLocation" x="-110" y="15"/>
         </scene>
     </scenes>
     <resources>
