@@ -42,7 +42,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <state key="normal" title="Cerrar sesión"/>
                                 <connections>
-                                    <action selector="Logout:" destination="3wt-c4-UnO" eventType="touchUpInside" id="ybs-Oy-SnP"/>
+                                    <action selector="Logout:" destination="3wt-c4-UnO" eventType="touchUpInside" id="Ced-kp-ond"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="59X-IO-xvd">
@@ -89,7 +89,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <state key="normal" title="Guardar datos"/>
                                 <connections>
-                                    <action selector="Save:" destination="3wt-c4-UnO" eventType="touchUpInside" id="AMV-sq-TeS"/>
+                                    <action selector="Save:" destination="3wt-c4-UnO" eventType="touchUpInside" id="9pB-Vt-9mN"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FJG-Mg-E4u">
@@ -141,11 +141,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Ajustes" image="person.fill" catalog="system" id="XEL-8I-e2J"/>
                     <connections>
-                        <outlet property="ConfirmPasswordField" destination="IRr-zl-ppS" id="YRP-48-S7V"/>
-                        <outlet property="PasswordField" destination="59X-IO-xvd" id="HXA-KE-SCL"/>
-                        <outlet property="SwitchMessages" destination="afP-V3-x9z" id="TBD-su-uNQ"/>
-                        <outlet property="UserImage" destination="evC-Rz-z3S" id="xSR-mD-IYJ"/>
-                        <outlet property="UsernameField" destination="FJG-Mg-E4u" id="aUz-dm-Zza"/>
+                        <outlet property="ConfirmPasswordField" destination="IRr-zl-ppS" id="mLc-Eo-R3I"/>
+                        <outlet property="PasswordField" destination="59X-IO-xvd" id="jix-Hs-gHL"/>
+                        <outlet property="SwitchMessages" destination="afP-V3-x9z" id="KgH-pn-9Ng"/>
+                        <outlet property="UserImage" destination="evC-Rz-z3S" id="huj-Cw-qda"/>
+                        <outlet property="UsernameField" destination="FJG-Mg-E4u" id="B2R-oK-3M4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6EZ-gq-cm9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
