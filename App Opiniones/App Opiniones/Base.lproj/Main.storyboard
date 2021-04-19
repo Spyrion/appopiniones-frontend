@@ -212,8 +212,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="xnv-vV-AZu"/>
                     <connections>
-                        <outlet property="searchBar" destination="t44-Yy-mCF" id="Cd6-Bg-l9I"/>
-                        <outlet property="table" destination="PFH-Fj-J2F" id="pXx-LM-FC1"/>
+                        <outlet property="searchBar" destination="t44-Yy-mCF" id="NHa-Ur-jlB"/>
+                        <outlet property="table" destination="PFH-Fj-J2F" id="DEm-G5-aiR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gu-Vl-O4a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -257,30 +257,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="Crear Tema"/>
-                                <connections>
-                                    <action selector="CrearTema:" destination="Jyw-fk-XSQ" eventType="touchUpInside" id="D9D-Ky-Bt5"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35e-a2-K4N">
                                 <rect key="frame" x="138" y="582" width="138" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Cambiar imagen"/>
-                                <connections>
-                                    <action selector="CambiarImagen:" destination="Jyw-fk-XSQ" eventType="touchUpInside" id="3YY-kc-DfF"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9ek-ep-Oh0"/>
                         <color key="backgroundColor" red="0.89637305699481862" green="0.89637305699481862" blue="0.89637305699481862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Crear tema" image="capslock.fill" catalog="system" id="4dj-wm-rpm"/>
-                    <connections>
-                        <outlet property="CategoriaCrearTema" destination="rcr-fk-CFc" id="1pg-dz-AuF"/>
-                        <outlet property="DescripcionCrearTema" destination="ghu-C2-UBv" id="V2e-m7-hSU"/>
-                        <outlet property="ImagenCrearTema" destination="06h-27-4bh" id="rCv-4x-wnx"/>
-                        <outlet property="TituloCrearTema" destination="NNa-XF-Kt3" id="c37-GC-pos"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zKO-nx-sQO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -324,10 +312,10 @@
             </objects>
             <point key="canvasLocation" x="489.85507246376818" y="1705.5803571428571"/>
         </scene>
-        <!--Tema Selection View Controller-->
+        <!--Seleccion Tema View Controller-->
         <scene sceneID="Xiv-pf-ywU">
             <objects>
-                <viewController storyboardIdentifier="hilo" id="5uV-ae-MdO" customClass="TemaSelectionViewController" customModule="App_Opiniones" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="hilo" id="5uV-ae-MdO" customClass="SeleccionTemaViewController" customModule="App_Opiniones" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6bw-4B-4Fv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -560,13 +548,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="64H-EL-t3B"/>
                     <connections>
-                        <outlet property="buttonFavorite" destination="xgX-By-T8a" id="16E-9v-BPk"/>
-                        <outlet property="descriptionLabel" destination="ZWs-Of-TSz" id="k1e-0Y-aJp"/>
-                        <outlet property="holder" destination="6bw-4B-4Fv" id="5Xp-W2-fBG"/>
-                        <outlet property="imageTema" destination="bio-Lg-Yfp" id="8Ji-rQ-EAM"/>
-                        <outlet property="tableViewMessages" destination="She-vw-2hd" id="Tz1-i8-0Vq"/>
-                        <outlet property="titleLabel" destination="w3h-G3-jOo" id="f3J-Hs-vE2"/>
-                        <outlet property="viewMessage" destination="igo-8O-VCd" id="lzf-Ks-Sgz"/>
+                        <outlet property="buttonFavorite" destination="xgX-By-T8a" id="O0M-lP-rZD"/>
+                        <outlet property="descriptionLabel" destination="ZWs-Of-TSz" id="99w-b1-CKn"/>
+                        <outlet property="holder" destination="sRs-ol-im9" id="wkT-UQ-x9k"/>
+                        <outlet property="imageTema" destination="bio-Lg-Yfp" id="loP-kW-9yg"/>
+                        <outlet property="tableViewMessages" destination="She-vw-2hd" id="x1D-zo-JYO"/>
+                        <outlet property="titleLabel" destination="w3h-G3-jOo" id="Tle-LI-fB5"/>
+                        <outlet property="viewMessage" destination="igo-8O-VCd" id="lsH-Qk-9wD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pwn-2b-4pj" sceneMemberID="firstResponder"/>
@@ -638,7 +626,7 @@
         <!--View Controller-->
         <scene sceneID="9SV-ja-190">
             <objects>
-                <viewController id="uKf-pG-IHc" customClass="ViewController" customModule="ProyectoCEV1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uKf-pG-IHc" customClass="ViewController" customModule="App_Opiniones" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lCi-E4-MLX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -668,7 +656,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TFp-dO-nPz">
                                                 <rect key="frame" x="16" y="97.5" width="382" height="108"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ARf-oP-n5S" customClass="DesignableView" customModule="ProyectoCEV1" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ARf-oP-n5S" customClass="DesignableView" customModule="App_Opiniones" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre de usuario" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="j82-XH-erK">
@@ -699,7 +687,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ws-av-14K" customClass="DesignableView" customModule="ProyectoCEV1" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ws-av-14K" customClass="DesignableView" customModule="App_Opiniones" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="58" width="382" height="50"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Cxt-qI-eAa">
