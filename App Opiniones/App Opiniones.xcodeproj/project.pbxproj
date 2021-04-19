@@ -11,7 +11,6 @@
 		43EE4AC9262CA3A0007F384C /* CrearTemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EE4AC4262CA39F007F384C /* CrearTemaViewController.swift */; };
 		43EE4ACA262CA3A0007F384C /* ListaTemasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EE4AC5262CA39F007F384C /* ListaTemasViewController.swift */; };
 		43EE4ACB262CA3A0007F384C /* TemaSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EE4AC6262CA3A0007F384C /* TemaSelectionViewController.swift */; };
-		DA4BD5BE262B4CC2007A4D8F /* UserDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA4BD5BD262B4CC2007A4D8F /* UserDetail.storyboard */; };
 		DA4BD5C1262B5033007A4D8F /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD5C0262B5033007A4D8F /* UserDetailViewController.swift */; };
 		DA9B889825FE9F6A00015873 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9B889725FE9F6A00015873 /* AppDelegate.swift */; };
 		DA9B889A25FE9F6A00015873 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9B889925FE9F6A00015873 /* SceneDelegate.swift */; };
@@ -26,7 +25,6 @@
 		43EE4AC4262CA39F007F384C /* CrearTemaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CrearTemaViewController.swift; path = "../../../proyectoFinalGrupoB - sprint 1/proyectoFinalGrupoB - sprint 1/CrearTemaViewController.swift"; sourceTree = "<group>"; };
 		43EE4AC5262CA39F007F384C /* ListaTemasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListaTemasViewController.swift; path = "../../../proyectoFinalGrupoB - sprint 1/proyectoFinalGrupoB - sprint 1/ListaTemasViewController.swift"; sourceTree = "<group>"; };
 		43EE4AC6262CA3A0007F384C /* TemaSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TemaSelectionViewController.swift; path = "../../../proyectoFinalGrupoB - sprint 1/proyectoFinalGrupoB - sprint 1/TemaSelectionViewController.swift"; sourceTree = "<group>"; };
-		DA4BD5BD262B4CC2007A4D8F /* UserDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserDetail.storyboard; sourceTree = "<group>"; };
 		DA4BD5C0262B5033007A4D8F /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		DA9B889425FE9F6A00015873 /* App Opiniones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Opiniones.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA9B889725FE9F6A00015873 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +77,6 @@
 				DA9B88A025FE9F6C00015873 /* Assets.xcassets */,
 				DA9B88A225FE9F6C00015873 /* LaunchScreen.storyboard */,
 				DA9B88A525FE9F6C00015873 /* Info.plist */,
-				DA4BD5BD262B4CC2007A4D8F /* UserDetail.storyboard */,
 				DA4BD5C0262B5033007A4D8F /* UserDetailViewController.swift */,
 			);
 			path = "App Opiniones";
@@ -144,7 +141,6 @@
 			files = (
 				DA9B88A425FE9F6C00015873 /* LaunchScreen.storyboard in Resources */,
 				DA9B88A125FE9F6C00015873 /* Assets.xcassets in Resources */,
-				DA4BD5BE262B4CC2007A4D8F /* UserDetail.storyboard in Resources */,
 				DA9B889F25FE9F6B00015873 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

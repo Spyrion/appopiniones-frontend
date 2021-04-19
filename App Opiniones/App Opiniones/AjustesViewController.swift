@@ -21,9 +21,10 @@ class AjustesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-
 }
+    
+    @IBAction func ChangePhoto(_ sender: Any) {
+    }
     
     @IBAction func Save(_ sender: Any) {
     }
