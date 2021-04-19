@@ -32,7 +32,7 @@
         <!--Ajustes-->
         <scene sceneID="Kc8-AH-x6u">
             <objects>
-                <viewController id="3wt-c4-UnO" customClass="AjustesViewController" customModule="proyectoFinalGrupoB___sprint_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3wt-c4-UnO" customClass="AjustesViewController" customModule="App_Opiniones" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A1o-He-bc3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,7 +155,7 @@
         <!--Temas-->
         <scene sceneID="uOz-xd-4rT">
             <objects>
-                <viewController title="Temas" id="FdT-sh-3Dx" customClass="ListaTemasViewController" customModule="proyectoFinalGrupoB___sprint_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Temas" id="FdT-sh-3Dx" customClass="ListaTemasViewController" customModule="App_Opiniones" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9pk-Ys-KBj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,7 +220,7 @@
         <!--Crear Tema-->
         <scene sceneID="aFh-G7-OaW">
             <objects>
-                <viewController title="Crear Tema" id="Jyw-fk-XSQ" customClass="CrearTemaViewController" customModule="proyectoFinalGrupoB___sprint_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Crear Tema" id="Jyw-fk-XSQ" customClass="CrearTemaViewController" customModule="App_Opiniones" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s1Q-lh-yV3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -274,7 +274,7 @@
         <!--Tema Selection View Controller-->
         <scene sceneID="Xiv-pf-ywU">
             <objects>
-                <viewController storyboardIdentifier="hilo" id="5uV-ae-MdO" customClass="TemaSelectionViewController" customModule="proyectoFinalGrupoB___sprint_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="hilo" id="5uV-ae-MdO" customClass="TemaSelectionViewController" customModule="App_Opiniones" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6bw-4B-4Fv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
