@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		437B5C2E262D96550064B2EA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B5C2D262D96550064B2EA /* LoginViewController.swift */; };
+		437B5C31262D96660064B2EA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B5C30262D96660064B2EA /* RegisterViewController.swift */; };
 		43D31691262D6C0400CCB817 /* AjustesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D31690262D6C0400CCB817 /* AjustesViewController.swift */; };
 		43EE4AC9262CA3A0007F384C /* CrearTemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EE4AC4262CA39F007F384C /* CrearTemaViewController.swift */; };
 		43EE4ACA262CA3A0007F384C /* ListaTemasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EE4AC5262CA39F007F384C /* ListaTemasViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		437B5C2D262D96550064B2EA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		437B5C30262D96660064B2EA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		43D31690262D6C0400CCB817 /* AjustesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjustesViewController.swift; sourceTree = "<group>"; };
 		43EE4AC4262CA39F007F384C /* CrearTemaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CrearTemaViewController.swift; path = "../../../proyectoFinalGrupoB - sprint 1/proyectoFinalGrupoB - sprint 1/CrearTemaViewController.swift"; sourceTree = "<group>"; };
 		43EE4AC5262CA39F007F384C /* ListaTemasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListaTemasViewController.swift; path = "../../../proyectoFinalGrupoB - sprint 1/proyectoFinalGrupoB - sprint 1/ListaTemasViewController.swift"; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 				DA9B88A225FE9F6C00015873 /* LaunchScreen.storyboard */,
 				DA9B88A525FE9F6C00015873 /* Info.plist */,
 				DA4BD5C0262B5033007A4D8F /* UserDetailViewController.swift */,
+				437B5C2D262D96550064B2EA /* LoginViewController.swift */,
+				437B5C30262D96660064B2EA /* RegisterViewController.swift */,
 			);
 			path = "App Opiniones";
 			sourceTree = "<group>";
@@ -152,6 +158,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				437B5C2E262D96550064B2EA /* LoginViewController.swift in Sources */,
+				437B5C31262D96660064B2EA /* RegisterViewController.swift in Sources */,
 				43EE4ACB262CA3A0007F384C /* TemaSelectionViewController.swift in Sources */,
 				43D31691262D6C0400CCB817 /* AjustesViewController.swift in Sources */,
 				43EE4ACA262CA3A0007F384C /* ListaTemasViewController.swift in Sources */,
