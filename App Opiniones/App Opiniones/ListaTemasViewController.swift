@@ -80,7 +80,7 @@ class ListaTemasViewController: UIViewController, UITableViewDelegate, UITableVi
         
         //presentaremos el hilo de mensajes para el tema seleccionado
         let position = indexPath.row //posición de cada Tema en el tableView
-        guard let vc = storyboard?.instantiateViewController(identifier: "hilo") as? TemaSelectionViewController else {
+        guard let vc = storyboard?.instantiateViewController(identifier: "hilo") as? SeleccionTemaViewController else {
             return
         }
         vc.temas = temas
