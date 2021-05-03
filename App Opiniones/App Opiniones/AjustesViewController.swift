@@ -27,9 +27,11 @@ class AjustesViewController: UIViewController {
     }
     
     @IBAction func Save(_ sender: Any) {
+        
     }
     
     @IBAction func Logout(_ sender: Any) {
+        
     }
     
     
