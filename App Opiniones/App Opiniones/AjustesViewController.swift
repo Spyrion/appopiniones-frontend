@@ -17,10 +17,14 @@ class AjustesViewController: UIViewController {
     @IBOutlet weak var SwitchMessages: UISwitch!
     
     var token: String = ""
+    var connection = Connection()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let idNuestro : Int = 3
+        connection.getDataAjustes(withId: idNuestro, method: <#T##String#>, params: <#T##[AnyHashable : Any]#>, completion: <#T##(DataAjustes?) -> Void#>)
+    
 }
     
     @IBAction func ChangePhoto(_ sender: Any) {

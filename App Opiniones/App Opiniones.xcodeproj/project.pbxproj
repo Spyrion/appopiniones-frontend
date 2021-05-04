@@ -12,6 +12,9 @@
 		43018A21262DF39F006365A9 /* SeleccionTemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43018A20262DF39F006365A9 /* SeleccionTemaViewController.swift */; };
 		437B5C2E262D96550064B2EA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B5C2D262D96550064B2EA /* LoginViewController.swift */; };
 		437B5C31262D96660064B2EA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B5C30262D96660064B2EA /* RegisterViewController.swift */; };
+		43A7633E264193E6000F5086 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7633D264193E6000F5086 /* Connection.swift */; };
+		43A7634126419805000F5086 /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7634026419805000F5086 /* Mappable.swift */; };
+		43A763442641A161000F5086 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A763432641A161000F5086 /* User.swift */; };
 		43D31691262D6C0400CCB817 /* AjustesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D31690262D6C0400CCB817 /* AjustesViewController.swift */; };
 		DA4BD5C1262B5033007A4D8F /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BD5C0262B5033007A4D8F /* UserDetailViewController.swift */; };
 		DA9B889825FE9F6A00015873 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9B889725FE9F6A00015873 /* AppDelegate.swift */; };
@@ -28,6 +31,9 @@
 		43018A20262DF39F006365A9 /* SeleccionTemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeleccionTemaViewController.swift; sourceTree = "<group>"; };
 		437B5C2D262D96550064B2EA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		437B5C30262D96660064B2EA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		43A7633D264193E6000F5086 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		43A7634026419805000F5086 /* Mappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mappable.swift; sourceTree = "<group>"; };
+		43A763432641A161000F5086 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		43D31690262D6C0400CCB817 /* AjustesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjustesViewController.swift; sourceTree = "<group>"; };
 		DA4BD5C0262B5033007A4D8F /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		DA9B889425FE9F6A00015873 /* App Opiniones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Opiniones.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +83,8 @@
 				DA9B889725FE9F6A00015873 /* AppDelegate.swift */,
 				DA9B889925FE9F6A00015873 /* SceneDelegate.swift */,
 				DA9B889B25FE9F6B00015873 /* ViewController.swift */,
+				43A7634026419805000F5086 /* Mappable.swift */,
+				43A7633D264193E6000F5086 /* Connection.swift */,
 				DA9B889D25FE9F6B00015873 /* Main.storyboard */,
 				DA9B88A025FE9F6C00015873 /* Assets.xcassets */,
 				DA9B88A225FE9F6C00015873 /* LaunchScreen.storyboard */,
@@ -84,6 +92,7 @@
 				DA4BD5C0262B5033007A4D8F /* UserDetailViewController.swift */,
 				437B5C2D262D96550064B2EA /* LoginViewController.swift */,
 				437B5C30262D96660064B2EA /* RegisterViewController.swift */,
+				43A763432641A161000F5086 /* User.swift */,
 			);
 			path = "App Opiniones";
 			sourceTree = "<group>";
@@ -164,7 +173,10 @@
 				43018A21262DF39F006365A9 /* SeleccionTemaViewController.swift in Sources */,
 				43D31691262D6C0400CCB817 /* AjustesViewController.swift in Sources */,
 				DA9B889C25FE9F6B00015873 /* ViewController.swift in Sources */,
+				43A763442641A161000F5086 /* User.swift in Sources */,
 				DA9B889825FE9F6A00015873 /* AppDelegate.swift in Sources */,
+				43A7634126419805000F5086 /* Mappable.swift in Sources */,
+				43A7633E264193E6000F5086 /* Connection.swift in Sources */,
 				DA4BD5C1262B5033007A4D8F /* UserDetailViewController.swift in Sources */,
 				DA9B889A25FE9F6A00015873 /* SceneDelegate.swift in Sources */,
 				43018A19262DF1C2006365A9 /* ListaTemasViewController.swift in Sources */,
