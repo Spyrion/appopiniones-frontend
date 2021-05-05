@@ -18,28 +18,7 @@ class Connection {
     
     //funcion para obtener los datos nuestros en los Ajustes
     
-    func getDataAjustes(withId id: Int, params: [AnyHashable: Any], completion: @escaping (_ user: User?) -> Void ) {
-    guard let urlDataAjustes = URL(string: baseURLStringUsuarios + "\(id)/") else {
-        completion(nil)
-        return
-        
-    }
-        
-        let urlSessionDataAjustes = URLSession(configuration: URLSessionConfiguration.default)
-
-        let task = urlSessionDataAjustes.dataTask(with: urlDataAjustes) {
-            data, response, error in
-
-            if error == nil {
-                 let user = User(withJsonData: data)
-                 completion(user)
-              } else {
-              completion(nil)
-
-              }
-        }
-        task.resume()
-        }
+    
         
         
         
@@ -53,10 +32,6 @@ class Connection {
             return
             
         }
-    /*
-    var registerRequest = URLRequest(url: urlRegister, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10)
-        registerRequest.httpMethod = "POST"
-    */
             
         }
     

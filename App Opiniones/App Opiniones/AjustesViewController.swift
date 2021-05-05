@@ -17,17 +17,44 @@ class AjustesViewController: UIViewController {
     @IBOutlet weak var SwitchMessages: UISwitch!
     
     var token: String = ""
-    var connection = Connection()
-    
+    let baseURLStringUsuarios = "localhost:8080/api/usuarios/"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let idNuestro : Int = 3
-        connection.getDataAjustes(withId: idNuestro, method: <#T##String#>, params: <#T##[AnyHashable : Any]#>, completion: <#T##(DataAjustes?) -> Void#>)
+    
+        
     
 }
+    func getDataAjustes(withId id: Int, params: [AnyHashable: Any], completion: @escaping (_ user: User?) -> Void ) {
+    guard let urlDataAjustes = URL(string: baseURLStringUsuarios + "\(id)/") else {
+        completion(nil)
+        return
+        
+    }
+        
+        let urlSessionDataAjustes = URLSession(configuration: URLSessionConfiguration.default)
+
+        let task = urlSessionDataAjustes.dataTask(with: urlDataAjustes) {
+            data, response, error in
+
+            if error == nil {
+                 let user = User(withJsonData: data)
+                 completion(user)
+              } else {
+              completion(nil)
+
+              }
+        }
+        task.resume()
+        }
     
     @IBAction func ChangePhoto(_ sender: Any) {
+        
+        let vc = UIImagePickerController()
+        vc.sourceType = .photoLibrary
+        vc.delegate = self
+        vc.allowsEditing = true
+        present(vc, animated: true)
     }
     
     @IBAction func Save(_ sender: Any) {
@@ -37,13 +64,23 @@ class AjustesViewController: UIViewController {
     @IBAction func Logout(_ sender: Any) {
         
     }
-    
-    
-    
-    
-   
-    
 
-   
 
+}
+
+extension AjustesViewController : UIImagePickerControllerDelegate , UINavigationControllerDelegate{
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        
+        if let imageNew = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            UserImage.image = imageNew
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
 }
