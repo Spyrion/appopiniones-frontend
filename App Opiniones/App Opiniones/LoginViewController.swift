@@ -9,6 +9,9 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    
+    var token = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -10,6 +10,7 @@
 		43018A19262DF1C2006365A9 /* ListaTemasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43018A18262DF1C2006365A9 /* ListaTemasViewController.swift */; };
 		43018A1D262DF25E006365A9 /* CrearTemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43018A1C262DF25E006365A9 /* CrearTemaViewController.swift */; };
 		43018A21262DF39F006365A9 /* SeleccionTemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43018A20262DF39F006365A9 /* SeleccionTemaViewController.swift */; };
+		433CEF212643EEA300C007B2 /* LoginRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 433CEF202643EEA300C007B2 /* LoginRegister.storyboard */; };
 		437B5C2E262D96550064B2EA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B5C2D262D96550064B2EA /* LoginViewController.swift */; };
 		437B5C31262D96660064B2EA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B5C30262D96660064B2EA /* RegisterViewController.swift */; };
 		43A7634126419805000F5086 /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7634026419805000F5086 /* Mappable.swift */; };
@@ -28,6 +29,7 @@
 		43018A18262DF1C2006365A9 /* ListaTemasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTemasViewController.swift; sourceTree = "<group>"; };
 		43018A1C262DF25E006365A9 /* CrearTemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearTemaViewController.swift; sourceTree = "<group>"; };
 		43018A20262DF39F006365A9 /* SeleccionTemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeleccionTemaViewController.swift; sourceTree = "<group>"; };
+		433CEF202643EEA300C007B2 /* LoginRegister.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginRegister.storyboard; sourceTree = "<group>"; };
 		437B5C2D262D96550064B2EA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		437B5C30262D96660064B2EA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		43A7634026419805000F5086 /* Mappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mappable.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				DA9B889B25FE9F6B00015873 /* ViewController.swift */,
 				43A7634026419805000F5086 /* Mappable.swift */,
 				DA9B889D25FE9F6B00015873 /* Main.storyboard */,
+				433CEF202643EEA300C007B2 /* LoginRegister.storyboard */,
 				DA9B88A025FE9F6C00015873 /* Assets.xcassets */,
 				DA9B88A225FE9F6C00015873 /* LaunchScreen.storyboard */,
 				DA9B88A525FE9F6C00015873 /* Info.plist */,
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA9B88A425FE9F6C00015873 /* LaunchScreen.storyboard in Resources */,
+				433CEF212643EEA300C007B2 /* LoginRegister.storyboard in Resources */,
 				DA9B88A125FE9F6C00015873 /* Assets.xcassets in Resources */,
 				DA9B889F25FE9F6B00015873 /* Main.storyboard in Resources */,
 			);

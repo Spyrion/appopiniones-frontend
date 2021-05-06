@@ -16,15 +16,35 @@ class AjustesViewController: UIViewController {
     @IBOutlet weak var ConfirmPasswordField: UITextField!
     @IBOutlet weak var SwitchMessages: UISwitch!
     
-    var token: String = ""
+    var token = ""
+    var Login = LoginViewController()
+    var RegisterId = RegisterViewController()
     let baseURLStringUsuarios = "localhost:8080/api/usuarios/"
+    var username : String = ""
+    var password : String = ""
+    var confirmpassword : String = ""
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        self.token = "\(Login.token)"
+        UsernameField.text = username
+        PasswordField.text = password
+        ConfirmPasswordField.text = confirmpassword
         
-    
-}
+        let jsonObject = """
+
+                        {
+                        "username" = \(username) ,
+                        "password" = \(password) ,
+                        "photo"
+                        }
+
+                        """
+        
+     
+    }
     func getDataAjustes(withId id: Int, params: [AnyHashable: Any], completion: @escaping (_ user: User?) -> Void ) {
     guard let urlDataAjustes = URL(string: baseURLStringUsuarios + "\(id)/") else {
         completion(nil)
@@ -59,9 +79,14 @@ class AjustesViewController: UIViewController {
     
     @IBAction func Save(_ sender: Any) {
         
+       
+        
     }
     
     @IBAction func Logout(_ sender: Any) {
+        
+        self.token = ""
+        
         
     }
 
