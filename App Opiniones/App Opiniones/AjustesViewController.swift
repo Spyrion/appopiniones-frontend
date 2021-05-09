@@ -23,7 +23,7 @@ class AjustesViewController: UIViewController {
     var username : String = ""
     var password : String = ""
     var confirmpassword : String = ""
-    
+
 
     
     override func viewDidLoad() {

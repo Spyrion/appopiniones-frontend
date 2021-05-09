@@ -221,7 +221,13 @@
                             <constraint firstItem="PFH-Fj-J2F" firstAttribute="top" secondItem="t44-Yy-mCF" secondAttribute="bottom" id="klj-KN-oQa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="xnv-vV-AZu"/>
+                    <navigationItem key="navigationItem" id="xnv-vV-AZu">
+                        <barButtonItem key="rightBarButtonItem" title="Iniciar Sesión" id="bXW-AS-91p">
+                            <connections>
+                                <segue destination="rsG-OJ-t5I" kind="presentation" modalPresentationStyle="fullScreen" id="fY0-i1-hbJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="t44-Yy-mCF" id="NHa-Ur-jlB"/>
                         <outlet property="table" destination="PFH-Fj-J2F" id="DEm-G5-aiR"/>
@@ -230,6 +236,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gu-Vl-O4a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1400" y="1705.5803571428571"/>
+        </scene>
+        <!--LoginRegister-->
+        <scene sceneID="szb-Op-VYq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LoginRegister" id="rsG-OJ-t5I" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Um-vH-v4d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2038" y="1512"/>
         </scene>
         <!--Crear Tema-->
         <scene sceneID="aFh-G7-OaW">
@@ -342,12 +356,12 @@
             </objects>
             <point key="canvasLocation" x="490" y="967"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Listas de temas-->
         <scene sceneID="Kk9-75-qkm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S02-yi-qKi" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="l2T-eY-uSZ"/>
+                    <navigationItem key="navigationItem" title="Listas de temas" id="l2T-eY-uSZ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="j0F-yl-nns">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -608,7 +622,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pwn-2b-4pj" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2206" y="1706"/>
+            <point key="canvasLocation" x="2165" y="2048"/>
         </scene>
         <!--Detalle de usuario-->
         <scene sceneID="Rve-BM-tO0">
@@ -670,7 +684,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="064-HQ-Why" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3068" y="1706"/>
+            <point key="canvasLocation" x="3020" y="2048"/>
         </scene>
     </scenes>
     <resources>
