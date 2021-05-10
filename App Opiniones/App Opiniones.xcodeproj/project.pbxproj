@@ -11,6 +11,7 @@
 		43018A1D262DF25E006365A9 /* CrearTemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43018A1C262DF25E006365A9 /* CrearTemaViewController.swift */; };
 		43018A21262DF39F006365A9 /* SeleccionTemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43018A20262DF39F006365A9 /* SeleccionTemaViewController.swift */; };
 		433CEF212643EEA300C007B2 /* LoginRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 433CEF202643EEA300C007B2 /* LoginRegister.storyboard */; };
+		435AF5832649856500BE3328 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435AF5822649856500BE3328 /* Connection.swift */; };
 		437B5C2E262D96550064B2EA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B5C2D262D96550064B2EA /* LoginViewController.swift */; };
 		437B5C31262D96660064B2EA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B5C30262D96660064B2EA /* RegisterViewController.swift */; };
 		43A7634126419805000F5086 /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7634026419805000F5086 /* Mappable.swift */; };
@@ -30,6 +31,7 @@
 		43018A1C262DF25E006365A9 /* CrearTemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearTemaViewController.swift; sourceTree = "<group>"; };
 		43018A20262DF39F006365A9 /* SeleccionTemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeleccionTemaViewController.swift; sourceTree = "<group>"; };
 		433CEF202643EEA300C007B2 /* LoginRegister.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginRegister.storyboard; sourceTree = "<group>"; };
+		435AF5822649856500BE3328 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		437B5C2D262D96550064B2EA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		437B5C30262D96660064B2EA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		43A7634026419805000F5086 /* Mappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mappable.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				437B5C2D262D96550064B2EA /* LoginViewController.swift */,
 				437B5C30262D96660064B2EA /* RegisterViewController.swift */,
 				43A763432641A161000F5086 /* User.swift */,
+				435AF5822649856500BE3328 /* Connection.swift */,
 			);
 			path = "App Opiniones";
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				435AF5832649856500BE3328 /* Connection.swift in Sources */,
 				437B5C2E262D96550064B2EA /* LoginViewController.swift in Sources */,
 				437B5C31262D96660064B2EA /* RegisterViewController.swift in Sources */,
 				43018A1D262DF25E006365A9 /* CrearTemaViewController.swift in Sources */,

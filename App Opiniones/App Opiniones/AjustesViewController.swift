@@ -18,55 +18,37 @@ class AjustesViewController: UIViewController {
     
     var token = ""
     var Login = LoginViewController()
-    var RegisterId = RegisterViewController()
-    let baseURLStringUsuarios = "localhost:8080/api/usuarios/"
+    var Register = RegisterViewController()
     var username : String = ""
     var password : String = ""
     var confirmpassword : String = ""
-
-
+    var connection = Connection()
+    let optionKey = "OptionKey"
+    let baseURLStringUsuarios = "localhost:8080/api/usuarios/"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.token = "\(Login.token)"
-        UsernameField.text = username
-        PasswordField.text = password
+        
+        username = String(UsernameField.text ?? "")
+        password = String(PasswordField.text ?? "")
         ConfirmPasswordField.text = confirmpassword
-        
-        let jsonObject = """
-
-                        {
-                        "username" = \(username) ,
-                        "password" = \(password) ,
-                        "photo"
-                        }
-
-                        """
-        
      
-    }
-    func getDataAjustes(withId id: Int, params: [AnyHashable: Any], completion: @escaping (_ user: User?) -> Void ) {
-    guard let urlDataAjustes = URL(string: baseURLStringUsuarios + "\(id)/") else {
-        completion(nil)
-        return
+
+        connection.getDataAjustes(withId: Register.id ?? 0 )
         
+        if let switchValue = UserDefaults.standard.value(forKey: optionKey) as? Bool {
+            
+            SwitchMessages.isOn = switchValue
+        } else {
+            
+            SwitchMessages.isOn = false
+        }
+
     }
-        
-        let urlSessionDataAjustes = URLSession(configuration: URLSessionConfiguration.default)
-
-        let task = urlSessionDataAjustes.dataTask(with: urlDataAjustes) {
-            data, response, error in
-
-            if error == nil {
-                 let user = User(withJsonData: data)
-                 completion(user)
-              } else {
-              completion(nil)
-
-              }
-        }
-        task.resume()
-        }
+    @IBAction func switchvalueChanged (_ sender : UISwitch){
+        UserDefaults.standard.setValue(sender.isOn, forKey: optionKey)
+    }
     
     @IBAction func ChangePhoto(_ sender: Any) {
         
@@ -79,9 +61,40 @@ class AjustesViewController: UIViewController {
     
     @IBAction func Save(_ sender: Any) {
         
-       
         
-    }
+        let jsonObject = """
+
+                        {
+                        "username" = \(username) ,
+                        "password" = \(password) ,
+                        }
+
+                        """
+        if (ConfirmPasswordField.text != PasswordField.text) {
+            print("Contraseñas no coincidentes")
+            
+        }
+        
+        // funcion PUT para ajustes
+        
+        func putAjustes(withId id: Int, params: [AnyHashable: Any], completion: @escaping (_ user: User?) -> Void ) {
+            guard let urlDataAjustes = URL(string: baseURLStringUsuarios + "\(id)/") else {
+               completion(nil)
+               return
+               
+           }
+                      var requestPUT = URLRequest(url: urlDataAjustes)
+                         requestPUT.httpMethod = "PUT"
+                         requestPUT.addValue("application/json", forHTTPHeaderField: "content-type")
+                         requestPUT.httpBody = try? JSONEncoder().encode(jsonObject)
+            
+            
+            
+
+            }
+        }
+        
+    
     
     @IBAction func Logout(_ sender: Any) {
         

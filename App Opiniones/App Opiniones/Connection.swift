@@ -2,50 +2,36 @@
 //  Connection.swift
 //  App Opiniones
 //
-//  Created by user185160 on 5/4/21.
+//  Created by user185160 on 5/10/21.
 //
 
 import Foundation
 
-class Connection {
-    
+class Connection : Mappable {
+    // funcion get para ajustes
     let baseURLStringUsuarios = "localhost:8080/api/usuarios/"
-    let baseURLStringMensajes = "localhost:8080/api/mensajes/"
-    let baseURLStringTemas    = "localhost:8080/api/temas/"
-    let BaseURLStringAuthenticate = "localhost:8080/api/authenticate"
-    let token = ""
     
-    
-    //funcion para obtener los datos nuestros en los Ajustes
-    
-    
-        
-        
-        
-    //funcion para registro
-    
-    
-        func register(withId id: Int, params: [AnyHashable: Any], completion: @escaping (_ user: User?) ->
-        Void ) {
-        guard let urlRegister = URL(string: baseURLStringUsuarios + "\(id)/") else {
-            completion(nil)
-            return
-            
-        }
-            
-        }
-    
-    
-    
-    
-   //funcion para login
-    
-    
-            
-            
-   // funcion para postear mensajes
-    
+    func getDataAjustes(withId id: Int) {
+    guard let urlDataAjustes = URL(string: baseURLStringUsuarios + "\(id)/") else {
+       completion(nil)
+       return
+       
+   }
+       
+       let urlSessionDataAjustes = URLSession(configuration: URLSessionConfiguration.default)
+
+       let task = urlSessionDataAjustes.dataTask(with: urlDataAjustes) {
+           data, response, error in
+
+           if error == nil {
+                let user = User(withJsonData: data)
+                completion(user)
+             } else {
+             completion(nil)
+
+             }
+       }
+       task.resume()
+       }
     
 }
-    
-

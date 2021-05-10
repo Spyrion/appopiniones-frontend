@@ -52,12 +52,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IRr-zl-ppS">
-                                <rect key="frame" x="78" y="577" width="259" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de usuario" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5x-gk-Wty">
                                 <rect key="frame" x="134" y="375" width="146" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -71,13 +65,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmar contraseña" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyh-hv-byv">
-                                <rect key="frame" x="124" y="542" width="166" height="21"/>
+                                <rect key="frame" x="124" y="554" width="166" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="afP-V3-x9z">
                                 <rect key="frame" x="266" y="663" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchvalueChanged:" destination="3wt-c4-UnO" eventType="valueChanged" id="nWZ-Zt-GG9"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compartir mensajes " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bW6-zu-5AO">
                                 <rect key="frame" x="80.5" y="668" width="157.5" height="20.5"/>
@@ -108,13 +105,19 @@
                                     <action selector="ChangePhoto:" destination="3wt-c4-UnO" eventType="touchUpInside" id="D9s-A3-ldU"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOL" translatesAutoresizingMaskIntoConstraints="NO" id="evC-Rz-z3S">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="evC-Rz-z3S">
                                 <rect key="frame" x="29" y="126" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="1eB-6O-mum"/>
                                     <constraint firstAttribute="width" constant="200" id="rZe-db-ZTs"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IRr-zl-ppS">
+                                <rect key="frame" x="80" y="583" width="259" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="icI-p3-4Tb"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -122,19 +125,19 @@
                             <constraint firstItem="F3Q-mV-g7N" firstAttribute="centerY" secondItem="A1o-He-bc3" secondAttribute="centerY" constant="-222" id="0vK-Xl-Qa6"/>
                             <constraint firstItem="FJG-Mg-E4u" firstAttribute="leading" secondItem="icI-p3-4Tb" secondAttribute="leading" constant="78" id="64O-2G-i5i"/>
                             <constraint firstItem="bW6-zu-5AO" firstAttribute="centerX" secondItem="A1o-He-bc3" secondAttribute="centerX" constant="-48" id="8CE-4z-A5X"/>
-                            <constraint firstItem="eyh-hv-byv" firstAttribute="centerX" secondItem="A1o-He-bc3" secondAttribute="centerX" id="AyB-kn-vEo"/>
                             <constraint firstItem="bW6-zu-5AO" firstAttribute="centerY" secondItem="A1o-He-bc3" secondAttribute="centerY" constant="230" id="CCt-6b-ILr"/>
                             <constraint firstItem="v5x-gk-Wty" firstAttribute="centerY" secondItem="A1o-He-bc3" secondAttribute="centerY" constant="-62.5" id="DW9-dY-9wo"/>
-                            <constraint firstItem="eyh-hv-byv" firstAttribute="centerY" secondItem="A1o-He-bc3" secondAttribute="centerY" constant="104.5" id="GWJ-Uc-h8g"/>
                             <constraint firstItem="d20-rh-xUh" firstAttribute="centerY" secondItem="A1o-He-bc3" secondAttribute="centerY" constant="316.5" id="IBB-rN-R1e"/>
                             <constraint firstItem="FJG-Mg-E4u" firstAttribute="top" secondItem="v5x-gk-Wty" secondAttribute="bottom" constant="17" id="JPS-27-svJ"/>
                             <constraint firstItem="F3Q-mV-g7N" firstAttribute="centerX" secondItem="A1o-He-bc3" secondAttribute="centerX" constant="107" id="K3L-2B-sw5"/>
+                            <constraint firstItem="eyh-hv-byv" firstAttribute="centerX" secondItem="A1o-He-bc3" secondAttribute="centerX" id="PKQ-pt-s8H"/>
                             <constraint firstItem="o1k-zU-Ui0" firstAttribute="centerY" secondItem="A1o-He-bc3" secondAttribute="centerY" constant="-360.5" id="ZTY-Ea-RYH"/>
                             <constraint firstItem="afP-V3-x9z" firstAttribute="centerX" secondItem="A1o-He-bc3" secondAttribute="centerX" constant="83.5" id="e4m-3P-F4F"/>
                             <constraint firstItem="evC-Rz-z3S" firstAttribute="centerY" secondItem="A1o-He-bc3" secondAttribute="centerY" constant="-222" id="eEM-JX-uI4"/>
                             <constraint firstItem="tZ2-U6-MjG" firstAttribute="top" secondItem="FJG-Mg-E4u" secondAttribute="bottom" constant="14" id="jIN-UW-vYX"/>
                             <constraint firstItem="evC-Rz-z3S" firstAttribute="centerX" secondItem="A1o-He-bc3" secondAttribute="centerX" constant="-78" id="kTR-ue-19i"/>
                             <constraint firstItem="tZ2-U6-MjG" firstAttribute="centerX" secondItem="A1o-He-bc3" secondAttribute="centerX" id="kl1-4O-r8T"/>
+                            <constraint firstItem="eyh-hv-byv" firstAttribute="centerY" secondItem="A1o-He-bc3" secondAttribute="centerY" constant="116.5" id="nQU-3O-XeO"/>
                             <constraint firstItem="afP-V3-x9z" firstAttribute="centerY" secondItem="A1o-He-bc3" secondAttribute="centerY" constant="230.5" id="qKy-hd-fEh"/>
                             <constraint firstItem="v5x-gk-Wty" firstAttribute="centerX" secondItem="A1o-He-bc3" secondAttribute="centerX" id="sQ1-nH-SBE"/>
                             <constraint firstItem="tZ2-U6-MjG" firstAttribute="centerY" secondItem="A1o-He-bc3" secondAttribute="centerY" constant="23.5" id="tQY-vU-LfM"/>
@@ -688,7 +691,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LOL" width="300" height="300"/>
         <image name="bubble.left.fill" catalog="system" width="128" height="110"/>
         <image name="capslock.fill" catalog="system" width="128" height="121"/>
         <image name="envelope.fill" catalog="system" width="128" height="93"/>
