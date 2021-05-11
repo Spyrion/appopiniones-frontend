@@ -15,7 +15,7 @@ class ListaTemasViewController: UIViewController, UITableViewDelegate, UITableVi
     //creamos el Outlet de la barra de búsqueda para
     @IBOutlet var searchBar: UISearchBar!
     
-    var temas = [Tema]()
+    var temas = [Tema2]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,17 +27,17 @@ class ListaTemasViewController: UIViewController, UITableViewDelegate, UITableVi
     
     //
     func configurarTemas() {
-        temas.append(Tema(titulo: "LOL",
+        temas.append(Tema2(titulo: "LOL",
                           descripcionBreve: "Fans del juego LOL",
                           descripcionCompleta: "...",
                           usuario: "FanLOL",
                           imagenTema: "LOL"))
-        temas.append(Tema(titulo: "Coches Eléctricos",
+        temas.append(Tema2(titulo: "Coches Eléctricos",
                           descripcionBreve: "Usuarios habituales de coches eléctricos",
                           descripcionCompleta: "...",
                           usuario: "greenPlanet",
                           imagenTema: "Coche"))
-        temas.append(Tema(titulo: "Smartphones",
+        temas.append(Tema2(titulo: "Smartphones",
                           descripcionBreve: "¿Cuáles son los mejores smartphones?",
                           descripcionCompleta: "...",
                           usuario: "programadorCEV",
@@ -90,7 +90,7 @@ class ListaTemasViewController: UIViewController, UITableViewDelegate, UITableVi
 
 }
 
-struct Tema {
+struct Tema2 {
     let titulo: String
     let descripcionBreve: String
     let descripcionCompleta: String

@@ -10,7 +10,7 @@ import UIKit
 class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
 
     public var position: Int = 0
-    public var temas: [Tema] = []
+    public var temas: [Tema2] = []
     
     //este holder se ocupará de que los elementos de la vista estén contenidos en la misma siempre para diferentes dispositivos
     @IBOutlet var holder: UIView!
