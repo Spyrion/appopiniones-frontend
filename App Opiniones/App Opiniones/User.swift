@@ -13,5 +13,5 @@ class User :  Mappable{
     var username :String?
     var password :String?
     var messages : Int?
-    
+    var photo : String?
 }

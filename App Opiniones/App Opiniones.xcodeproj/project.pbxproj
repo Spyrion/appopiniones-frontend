@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A56642B264AB7F80075B7AA /* Tema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56642A264AB7F80075B7AA /* Tema.swift */; };
+		0A56642E264AB96F0075B7AA /* Mensaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56642D264AB96F0075B7AA /* Mensaje.swift */; };
 		43018A19262DF1C2006365A9 /* ListaTemasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43018A18262DF1C2006365A9 /* ListaTemasViewController.swift */; };
 		43018A1D262DF25E006365A9 /* CrearTemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43018A1C262DF25E006365A9 /* CrearTemaViewController.swift */; };
 		43018A21262DF39F006365A9 /* SeleccionTemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43018A20262DF39F006365A9 /* SeleccionTemaViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A56642A264AB7F80075B7AA /* Tema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tema.swift; sourceTree = "<group>"; };
+		0A56642D264AB96F0075B7AA /* Mensaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mensaje.swift; sourceTree = "<group>"; };
 		43018A18262DF1C2006365A9 /* ListaTemasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTemasViewController.swift; sourceTree = "<group>"; };
 		43018A1C262DF25E006365A9 /* CrearTemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearTemaViewController.swift; sourceTree = "<group>"; };
 		43018A20262DF39F006365A9 /* SeleccionTemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeleccionTemaViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 				DA4BD5C0262B5033007A4D8F /* UserDetailViewController.swift */,
 				437B5C2D262D96550064B2EA /* LoginViewController.swift */,
 				437B5C30262D96660064B2EA /* RegisterViewController.swift */,
+				0A56642A264AB7F80075B7AA /* Tema.swift */,
+				0A56642D264AB96F0075B7AA /* Mensaje.swift */,
 				43A763432641A161000F5086 /* User.swift */,
 				435AF5822649856500BE3328 /* Connection.swift */,
 			);
@@ -181,6 +187,8 @@
 				43A763442641A161000F5086 /* User.swift in Sources */,
 				DA9B889825FE9F6A00015873 /* AppDelegate.swift in Sources */,
 				43A7634126419805000F5086 /* Mappable.swift in Sources */,
+				0A56642E264AB96F0075B7AA /* Mensaje.swift in Sources */,
+				0A56642B264AB7F80075B7AA /* Tema.swift in Sources */,
 				DA4BD5C1262B5033007A4D8F /* UserDetailViewController.swift in Sources */,
 				DA9B889A25FE9F6A00015873 /* SceneDelegate.swift in Sources */,
 				43018A19262DF1C2006365A9 /* ListaTemasViewController.swift in Sources */,
