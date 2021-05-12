@@ -18,12 +18,15 @@ class AjustesViewController: UIViewController {
     @IBOutlet weak var GuardarDatos: UIButton!
     
     var token = ""
+    
     var Login = LoginViewController()
     var Register = RegisterViewController()
+    var connection = Connection()
+    
     var username : String = ""
     var password : String = ""
     var confirmpassword : String = ""
-    var connection = Connection()
+    
     let optionKey = "OptionKey"
     let baseURLStringUsuarios = "localhost:8080/api/usuarios/"
     
