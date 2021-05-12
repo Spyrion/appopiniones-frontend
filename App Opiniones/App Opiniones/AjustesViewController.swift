@@ -37,6 +37,8 @@ class AjustesViewController: UIViewController {
 
         connection.getDataAjustes(withId: Register.id ?? 0){ user in
 
+            self.username = user?.username ?? ""
+            self.password = user?.password ?? ""
         }
         
         if let switchValue = UserDefaults.standard.value(forKey: optionKey) as? Bool {
