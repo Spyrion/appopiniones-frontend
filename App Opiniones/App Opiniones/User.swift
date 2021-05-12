@@ -14,6 +14,8 @@ class User :  Mappable{
     var password :String?
     var messages : Int?
     var photo : String?
+    var tema : Tema?
+    var mensaje :  Mensaje?
     
     private enum CodingKeys : String , CodingKey {
         
@@ -22,5 +24,7 @@ class User :  Mappable{
         case password = "password"
         case messages = "messages"
         case photo = "photo"
+        case tema = "tema"
+        case mensaje = "mensaje"
     }
 }

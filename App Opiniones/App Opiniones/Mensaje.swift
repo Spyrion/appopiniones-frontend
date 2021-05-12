@@ -11,4 +11,15 @@ class Mensaje : Mappable {
     var id : Int?
     var body : String?
     var usuario : User?
+    var tema : Tema?
+    
+    private enum CodingKeys : String , CodingKey {
+        
+        case id = "id"
+        case body = "body"
+        case usuario = "usuario"
+        case tema = "tema"
+        
+    }
+    
 }
