@@ -36,8 +36,7 @@ class AjustesViewController: UIViewController {
         GuardarDatos.isEnabled = true
 
         connection.getDataAjustes(withId: Register.id ?? 0){ user in
-            self.username = (user?.username)!
-            self.password = (user?.password)!
+
         }
         
         if let switchValue = UserDefaults.standard.value(forKey: optionKey) as? Bool {
@@ -84,8 +83,8 @@ class AjustesViewController: UIViewController {
         let jsonObject = """
 
                         {
-                        "username" = \(username) ,
-                        "password" = \(password) ,
+                        "username" = "\(username)" ,
+                        "password" = "\(password)" ,
                         }
 
                         """
