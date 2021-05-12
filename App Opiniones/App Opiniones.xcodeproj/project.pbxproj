@@ -82,6 +82,9 @@
 		DA9B889625FE9F6A00015873 /* App Opiniones */ = {
 			isa = PBXGroup;
 			children = (
+				437B5C2D262D96550064B2EA /* LoginViewController.swift */,
+				437B5C30262D96660064B2EA /* RegisterViewController.swift */,
+				DA4BD5C0262B5033007A4D8F /* UserDetailViewController.swift */,
 				43D31690262D6C0400CCB817 /* AjustesViewController.swift */,
 				43018A20262DF39F006365A9 /* SeleccionTemaViewController.swift */,
 				43018A1C262DF25E006365A9 /* CrearTemaViewController.swift */,
@@ -95,9 +98,6 @@
 				DA9B88A025FE9F6C00015873 /* Assets.xcassets */,
 				DA9B88A225FE9F6C00015873 /* LaunchScreen.storyboard */,
 				DA9B88A525FE9F6C00015873 /* Info.plist */,
-				DA4BD5C0262B5033007A4D8F /* UserDetailViewController.swift */,
-				437B5C2D262D96550064B2EA /* LoginViewController.swift */,
-				437B5C30262D96660064B2EA /* RegisterViewController.swift */,
 				0A56642A264AB7F80075B7AA /* Tema.swift */,
 				0A56642D264AB96F0075B7AA /* Mensaje.swift */,
 				43A763432641A161000F5086 /* User.swift */,

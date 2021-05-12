@@ -15,6 +15,7 @@ class AjustesViewController: UIViewController {
     @IBOutlet weak var PasswordField: UITextField!
     @IBOutlet weak var ConfirmPasswordField: UITextField!
     @IBOutlet weak var SwitchMessages: UISwitch!
+    @IBOutlet weak var GuardarDatos: UIButton!
     
     var token = ""
     var Login = LoginViewController()
@@ -29,13 +30,12 @@ class AjustesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.token = "\(Login.token)"
-        
-        username = String(UsernameField.text ?? "")
-        password = String(PasswordField.text ?? "")
-        ConfirmPasswordField.text = confirmpassword
-     
+        GuardarDatos.isEnabled = true
 
-        connection.getDataAjustes(withId: Register.id ?? 0 )
+        connection.getDataAjustes(withId: Register.id ?? 0){ user in
+            self.username = (user?.username)!
+            self.password = (user?.password)!
+        }
         
         if let switchValue = UserDefaults.standard.value(forKey: optionKey) as? Bool {
             
@@ -45,7 +45,23 @@ class AjustesViewController: UIViewController {
             SwitchMessages.isOn = false
         }
 
+        username = String(UsernameField.text ?? "")
+        password = String(PasswordField.text ?? "")
+        confirmpassword = password
+        ConfirmPasswordField.text = confirmpassword
+    
+    
+    if (ConfirmPasswordField.text != PasswordField.text) {
+        
+        GuardarDatos.isEnabled = false
+        
+    } else {
+        
+        GuardarDatos.isEnabled = true
     }
+        
+    }
+    
     @IBAction func switchvalueChanged (_ sender : UISwitch){
         UserDefaults.standard.setValue(sender.isOn, forKey: optionKey)
     }
@@ -70,11 +86,7 @@ class AjustesViewController: UIViewController {
                         }
 
                         """
-        if (ConfirmPasswordField.text != PasswordField.text) {
-            print("Contraseñas no coincidentes")
-            
-        }
-        
+      
         // funcion PUT para ajustes
         
         func putAjustes(withId id: Int, params: [AnyHashable: Any], completion: @escaping (_ user: User?) -> Void ) {
@@ -83,14 +95,10 @@ class AjustesViewController: UIViewController {
                return
                
            }
-                      var requestPUT = URLRequest(url: urlDataAjustes)
+            var requestPUT = URLRequest(url: urlDataAjustes , cachePolicy: .useProtocolCachePolicy , timeoutInterval:  10 )
                          requestPUT.httpMethod = "PUT"
                          requestPUT.addValue("application/json", forHTTPHeaderField: "content-type")
                          requestPUT.httpBody = try? JSONEncoder().encode(jsonObject)
-            
-            
-            
-
             }
         }
         

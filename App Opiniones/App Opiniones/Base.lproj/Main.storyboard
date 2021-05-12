@@ -149,6 +149,7 @@
                     <tabBarItem key="tabBarItem" title="Ajustes" image="person.fill" catalog="system" id="XEL-8I-e2J"/>
                     <connections>
                         <outlet property="ConfirmPasswordField" destination="IRr-zl-ppS" id="mLc-Eo-R3I"/>
+                        <outlet property="GuardarDatos" destination="d20-rh-xUh" id="q3A-ow-It9"/>
                         <outlet property="PasswordField" destination="59X-IO-xvd" id="jix-Hs-gHL"/>
                         <outlet property="SwitchMessages" destination="afP-V3-x9z" id="KgH-pn-9Ng"/>
                         <outlet property="UserImage" destination="evC-Rz-z3S" id="huj-Cw-qda"/>

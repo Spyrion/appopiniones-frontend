@@ -9,9 +9,18 @@ import Foundation
 
 class User :  Mappable{
     
-    var id :Int?
+    var id: Int?
     var username :String?
     var password :String?
     var messages : Int?
     var photo : String?
+    
+    private enum CodingKeys : String , CodingKey {
+        
+        case id = "id"
+        case username = "username"
+        case password = "password"
+        case messages = "messages"
+        case photo = "photo"
+    }
 }
