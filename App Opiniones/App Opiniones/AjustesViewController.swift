@@ -80,6 +80,7 @@ class AjustesViewController: UIViewController {
         vc.delegate = self
         vc.allowsEditing = true
         present(vc, animated: true)
+ 
     }
     
     @IBAction func Save(_ sender: Any) {
@@ -123,12 +124,14 @@ class AjustesViewController: UIViewController {
 
 }
 
-extension AjustesViewController : UIImagePickerControllerDelegate , UINavigationControllerDelegate{
+extension AjustesViewController: UIImagePickerControllerDelegate , UINavigationControllerDelegate{
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info:
+                                [UIImagePickerController.InfoKey : Any]) {
         
         
-        if let imageNew = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+        if let imageNew = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as?
+            UIImage {
             UserImage.image = imageNew
          
         }
@@ -140,3 +143,4 @@ extension AjustesViewController : UIImagePickerControllerDelegate , UINavigation
         picker.dismiss(animated: true, completion: nil)
     }
 }
+
