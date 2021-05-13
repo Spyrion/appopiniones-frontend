@@ -93,7 +93,7 @@ class AjustesViewController: UIViewController {
       
         // funcion PUT para ajustes
         
-        func putAjustes(withId id: Int, params: [AnyHashable: Any], completion: @escaping (_ user: User?) -> Void ) {
+        func putAjustes(withId  id : Int = Register.id ?? 0  ,  params: [AnyHashable: Any], completion: @escaping (_ user: User?) -> Void ) {
             guard let urlDataAjustes = URL(string: baseURLStringUsuarios + "\(id)/") else {
                completion(nil)
                return
