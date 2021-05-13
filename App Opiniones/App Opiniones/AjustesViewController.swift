@@ -52,11 +52,10 @@ class AjustesViewController: UIViewController {
             SwitchMessages.isOn = false
         }
         
-
-        username = String(UsernameField.text ?? "")
-        password = String(PasswordField.text ?? "")
+        UsernameField.text = username
+        PasswordField.text = password
+        ConfirmPasswordField.text = password
         confirmpassword = password
-        ConfirmPasswordField.text = confirmpassword
     
     
     if (ConfirmPasswordField.text != PasswordField.text) {
