@@ -38,8 +38,8 @@ class AjustesViewController: UIViewController {
         
         connection.getDataAjustes(withId: Register.id ?? 0){ user in
 
-            self.UsernameField.text = user?.username ?? ""
-            self.PasswordField.text = user?.password ?? ""
+            self.username = user?.username ?? ""
+            self.password = user?.password ?? ""
         }
         
         ConfirmPasswordField.text = String(PasswordField.text ?? "")
