@@ -27,6 +27,7 @@ class AjustesViewController: UIViewController {
     var password : String = ""
     var confirmpassword : String = ""
     
+  
     let optionKey = "OptionKey"
     let baseURLStringUsuarios = "localhost:8080/api/usuarios/"
     
@@ -34,12 +35,14 @@ class AjustesViewController: UIViewController {
         super.viewDidLoad()
         self.token = "\(Login.token)"
         GuardarDatos.isEnabled = true
-
+        
         connection.getDataAjustes(withId: Register.id ?? 0){ user in
 
-            self.username = user?.username ?? ""
-            self.password = user?.password ?? ""
+            self.UsernameField.text = user?.username ?? ""
+            self.PasswordField.text = user?.password ?? ""
         }
+        
+        ConfirmPasswordField.text = String(PasswordField.text ?? "")
         
         if let switchValue = UserDefaults.standard.value(forKey: optionKey) as? Bool {
             
@@ -48,6 +51,7 @@ class AjustesViewController: UIViewController {
             
             SwitchMessages.isOn = false
         }
+        
 
         username = String(UsernameField.text ?? "")
         password = String(PasswordField.text ?? "")
@@ -104,6 +108,8 @@ class AjustesViewController: UIViewController {
                          requestPUT.addValue("application/json", forHTTPHeaderField: "content-type")
                          requestPUT.httpBody = try? JSONEncoder().encode(jsonObject)
             }
+        
+        
         }
         
     
@@ -125,6 +131,7 @@ extension AjustesViewController : UIImagePickerControllerDelegate , UINavigation
         
         if let imageNew = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
             UserImage.image = imageNew
+         
         }
         
         picker.dismiss(animated: true, completion: nil)

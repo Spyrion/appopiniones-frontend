@@ -105,7 +105,7 @@
                                     <action selector="ChangePhoto:" destination="3wt-c4-UnO" eventType="touchUpInside" id="D9s-A3-ldU"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="evC-Rz-z3S">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="evC-Rz-z3S">
                                 <rect key="frame" x="29" y="126" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="1eB-6O-mum"/>
