@@ -20,14 +20,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Jyw-fk-XSQ" kind="relationship" relationship="viewControllers" id="9JZ-Ls-Zir"/>
-                        <segue destination="Qd3-9d-xQp" kind="relationship" relationship="viewControllers" id="ab8-kP-fqC"/>
-                        <segue destination="3wt-c4-UnO" kind="relationship" relationship="viewControllers" id="hMD-cD-Ha2"/>
+                        <segue destination="Qd3-9d-xQp" kind="relationship" relationship="viewControllers" id="cd2-fp-1Bu"/>
+                        <segue destination="Jyw-fk-XSQ" kind="relationship" relationship="viewControllers" id="S4f-Sj-MR9"/>
+                        <segue destination="3wt-c4-UnO" kind="relationship" relationship="viewControllers" id="pLs-T5-um6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vzI-iB-Ov1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="512" y="211"/>
+            <point key="canvasLocation" x="445" y="211"/>
         </scene>
         <!--Ajustes-->
         <scene sceneID="Kc8-AH-x6u">
@@ -105,7 +105,7 @@
                                     <action selector="ChangePhoto:" destination="3wt-c4-UnO" eventType="touchUpInside" id="D9s-A3-ldU"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="evC-Rz-z3S">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="evC-Rz-z3S">
                                 <rect key="frame" x="29" y="126" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="1eB-6O-mum"/>
@@ -239,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gu-Vl-O4a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1400" y="1705.5803571428571"/>
+            <point key="canvasLocation" x="445" y="1706"/>
         </scene>
         <!--LoginRegister-->
         <scene sceneID="szb-Op-VYq">
@@ -247,7 +247,7 @@
                 <viewControllerPlaceholder storyboardName="LoginRegister" id="rsG-OJ-t5I" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Um-vH-v4d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2038" y="1512"/>
+            <point key="canvasLocation" x="1323" y="1487"/>
         </scene>
         <!--Crear Tema-->
         <scene sceneID="aFh-G7-OaW">
@@ -339,7 +339,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zKO-nx-sQO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-326.08695652173918" y="966.96428571428567"/>
+            <point key="canvasLocation" x="445" y="967"/>
         </scene>
         <!--Temas-->
         <scene sceneID="L2S-Xk-TtD">
@@ -358,7 +358,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oaj-oL-wlk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="490" y="967"/>
+            <point key="canvasLocation" x="-303" y="967"/>
         </scene>
         <!--Listas de temas-->
         <scene sceneID="Kk9-75-qkm">
@@ -377,7 +377,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8aZ-74-gTQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="489.85507246376818" y="1705.5803571428571"/>
+            <point key="canvasLocation" x="-304" y="1706"/>
         </scene>
         <!--Seleccion Tema View Controller-->
         <scene sceneID="Xiv-pf-ywU">
@@ -626,7 +626,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pwn-2b-4pj" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2165" y="2048"/>
+            <point key="canvasLocation" x="1367" y="2031"/>
         </scene>
         <!--Detalle de usuario-->
         <scene sceneID="Rve-BM-tO0">
@@ -688,7 +688,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="064-HQ-Why" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3020" y="2048"/>
+            <point key="canvasLocation" x="2236" y="2030"/>
         </scene>
     </scenes>
     <resources>
