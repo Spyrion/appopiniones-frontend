@@ -9,7 +9,7 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
-    var id : Int?
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -20,7 +20,6 @@ class AjustesViewController: UIViewController {
     var token = ""
     
     var Login = LoginViewController()
-    var Register = RegisterViewController()
     var connection = Connection()
     
     var username : String = ""
@@ -36,7 +35,7 @@ class AjustesViewController: UIViewController {
         self.token = "\(Login.token)"
         GuardarDatos.isEnabled = true
         
-        connection.getDataAjustes(withId: Register.id ?? 0){ user in
+        connection.getDataAjustes(withId: Login.id ?? 0){ user in
 
             self.username = user?.username ?? ""
             self.password = user?.password ?? ""
@@ -98,7 +97,7 @@ class AjustesViewController: UIViewController {
       
         // funcion PUT para ajustes
         
-        func putAjustes(withId  id : Int = Register.id ?? 0  ,  params: [AnyHashable: Any], completion: @escaping (_ user: User?) -> Void ) {
+        func putAjustes(withId  id : Int = Login.id ?? 0  ,  params: [AnyHashable: Any], completion: @escaping (_ user: User?) -> Void ) {
             guard let urlDataAjustes = URL(string: baseURLStringUsuarios + "\(id)/") else {
                completion(nil)
                return
