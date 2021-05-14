@@ -67,6 +67,7 @@ class AjustesViewController: UIViewController {
         GuardarDatos.isEnabled = true
     }
         
+        
     }
     
     @IBAction func switchvalueChanged (_ sender : UISwitch){
@@ -105,8 +106,10 @@ class AjustesViewController: UIViewController {
            }
             var requestPUT = URLRequest(url: urlDataAjustes , cachePolicy: .useProtocolCachePolicy , timeoutInterval:  10 )
                          requestPUT.httpMethod = "PUT"
-                         requestPUT.addValue("application/json", forHTTPHeaderField: "content-type")
-                         requestPUT.httpBody = try? JSONEncoder().encode(jsonObject)
+                         requestPUT.addValue("application/json", forHTTPHeaderField: "Content-type")
+                         requestPUT.httpBody = try? JSONSerialization.data(withJSONObject: jsonObject, options: [])
+            
+            
             }
         
         
