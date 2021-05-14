@@ -10,7 +10,7 @@ import UIKit
 class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
 
     public var position: Int = 0
-    public var temas: [Tema2] = []
+    var temas = [Tema]()
     
     //este holder se ocupará de que los elementos de la vista estén contenidos en la misma siempre para diferentes dispositivos
     @IBOutlet var holder: UIView!
@@ -33,9 +33,9 @@ class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITab
         super.viewDidLoad()
         tableViewMessages.delegate = self
         tableViewMessages.dataSource = self
-        imageTema.image = UIImage(named: temas[position].imagenTema)
-        titleLabel.text = temas[position].titulo
-        descriptionLabel.text = temas[position].descripcionBreve
+        imageTema.image = UIImage(named: temas[position].photo ?? "No Picture")
+        titleLabel.text = temas[position].title
+        descriptionLabel.text = temas[position].description
         buttonFavorite.layer.cornerRadius = 15
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -70,7 +70,7 @@ class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITab
                                            y: 10,
                                            width: holder.frame.size.width-20,
                                            height: holder.frame.size.width-20)
-        descriptionTextView.text = tema.descripcionBreve
+        descriptionTextView.text = tema.description
         holder.addSubview(descriptionTextView)
     }
     

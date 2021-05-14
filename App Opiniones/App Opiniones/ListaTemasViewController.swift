@@ -15,17 +15,22 @@ class ListaTemasViewController: UIViewController, UITableViewDelegate, UITableVi
     //creamos el Outlet de la barra de búsqueda para
     @IBOutlet var searchBar: UISearchBar!
     
-    var temas = [Tema2]()
+    // Recargar la tabla cada vez que el array de temas sea modificado
+    var temas = [Tema]() {
+        didSet {
+            table.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configurarTemas()
+        // configurarTemas()
+        
         table.delegate = self
         table.dataSource = self
-
     }
     
-    //
+    /*
     func configurarTemas() {
         temas.append(Tema2(titulo: "LOL",
                           descripcionBreve: "Fans del juego LOL",
@@ -43,7 +48,9 @@ class ListaTemasViewController: UIViewController, UITableViewDelegate, UITableVi
                           usuario: "programadorCEV",
                           imagenTema: "Smartphone"))
     }
+    */
     
+    // MARK: - Métodos TableView
     //numero de filas en las que habrá un tema en cada una de ellas
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return temas.count
@@ -55,9 +62,9 @@ class ListaTemasViewController: UIViewController, UITableViewDelegate, UITableVi
         let tema = temas[indexPath.row]
         
         //configuramos los campos que apareceran de cada tema
-        cell.textLabel?.text = tema.titulo
-        cell.detailTextLabel?.text = tema.descripcionBreve
-        cell.imageView?.image = UIImage(named: tema.imagenTema)
+        cell.textLabel?.text = tema.title
+        cell.detailTextLabel?.text = tema.description
+        cell.imageView?.image = UIImage(named: tema.photo ?? "")
         cell.accessoryType = .disclosureIndicator
         
         //le damos formato a la celda de cada Tema
@@ -73,7 +80,6 @@ class ListaTemasViewController: UIViewController, UITableViewDelegate, UITableVi
         return 70
     }
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //deseleccionaremos la celda
         tableView.deselectRow(at: indexPath, animated: true)
@@ -87,9 +93,19 @@ class ListaTemasViewController: UIViewController, UITableViewDelegate, UITableVi
         vc.position = position
         present(vc, animated: true)
     }
+    
+    // MARK: - Métodos Unwind
+    @IBAction func guardar(segue: UIStoryboardSegue) {
+        if let crearTemaVC = segue.source as? CrearTemaViewController,
+           let newTema = crearTemaVC.tema {
+            temas.append(newTema)
+            self.table.reloadData()
+        }
+    }
 
 }
 
+/*
 struct Tema2 {
     let titulo: String
     let descripcionBreve: String
@@ -97,4 +113,4 @@ struct Tema2 {
     let usuario: String
     let imagenTema: String
 }
-
+*/

@@ -264,7 +264,6 @@
                                     <constraint firstAttribute="height" constant="34" id="H4V-qb-7Md"/>
                                     <constraint firstAttribute="width" constant="260" id="Sg3-yp-3px"/>
                                 </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -310,6 +309,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Crear Tema"/>
+                                <connections>
+                                    <segue destination="qA3-uY-Kjq" kind="unwind" identifier="guardarTema" unwindAction="guardarWithSegue:" id="cbU-uo-fDB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9ek-ep-Oh0"/>
@@ -336,8 +338,15 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Crear tema" image="capslock.fill" catalog="system" id="4dj-wm-rpm"/>
+                    <connections>
+                        <outlet property="categoriaTextField" destination="rcr-fk-CFc" id="uCJ-0T-1nZ"/>
+                        <outlet property="descripcionTextField" destination="ghu-C2-UBv" id="CFo-bf-U0O"/>
+                        <outlet property="temaImageView" destination="06h-27-4bh" id="Ic5-cv-Qxk"/>
+                        <outlet property="tituloTextField" destination="NNa-XF-Kt3" id="lxb-mQ-dNQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zKO-nx-sQO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="qA3-uY-Kjq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="445" y="967"/>
         </scene>

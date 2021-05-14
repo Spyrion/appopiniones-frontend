@@ -9,24 +9,41 @@ import UIKit
 
 class CrearTemaViewController: UIViewController {
 
-    @IBOutlet weak var TituloCrearTema: UITextField!
-    @IBOutlet weak var DescripcionCrearTema: UITextField!
+    // Outlets
+    @IBOutlet weak var tituloTextField: UITextField!
+    @IBOutlet weak var descripcionTextField: UITextField!
+    @IBOutlet weak var categoriaTextField: UITextField!
+    @IBOutlet weak var temaImageView: UIImageView!
     
-    @IBOutlet weak var CategoriaCrearTema: UITextField!
-    @IBOutlet weak var ImagenCrearTema: UIImageView!
+    // Objeto tema
+    var tema: Tema?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Esconder teclado al presionar en cualquier lugar de la pantalla.
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
     }
-    
-
-    @IBAction func CambiarImagen(_ sender: Any) {
+        
+    // Ejecutar guardarTema cuando el btn de "crear tema" sea pulsado ya que tiene un segue asignado que nos llevará a la lista de temas de nuevo
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "guardarTema" {
+            guardarTema()
+        }
     }
-    
-    
-    @IBAction func CrearTema(_ sender: Any) {
+        
+    func guardarTema() {
+        // Comprobar que existan los varios datos introducidos y si están vacíos
+        if let tituloTema = self.tituloTextField.text, !tituloTema.isEmpty,
+           let descripcionTema = self.descripcionTextField.text, !descripcionTema.isEmpty,
+           let categoriaTema = self.categoriaTextField.text, !categoriaTema.isEmpty {
+            // Crear nuevo objeto tema y asignarle los datos introducidos en los text fields
+            let newTema = Tema()
+            newTema.title = tituloTema
+            newTema.description = descripcionTema
+            newTema.category = categoriaTema
+            self.tema = newTema
+        }
     }
-    
 }
