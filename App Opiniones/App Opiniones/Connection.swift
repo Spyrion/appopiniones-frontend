@@ -8,8 +8,10 @@
 import Foundation
 
 class Connection : Mappable {
+    
     // funcion get para ajustes
     let baseURLStringUsuarios = "localhost:8080/api/usuarios/"
+    let baseUrlStringTemas = ""
     
     func getDataAjustes(withId id: Int  , completion: @escaping (_ user: User?) -> Void) {
     guard let urlDataAjustes = URL(string: baseURLStringUsuarios + "\(id)/") else {
@@ -26,6 +28,29 @@ class Connection : Mappable {
            if error == nil {
                 let user = User(withJsonData: data)
                 completion(user)
+             } else {
+             completion(nil)
+
+             }
+       }
+       task.resume()
+       }
+    
+    func getTema(withId id: Int  , completion: @escaping (_ tema: Tema?) -> Void) {
+    guard let url = URL(string: baseUrlStringTemas + "\(id)/") else {
+       completion(nil)
+       return
+       
+   }
+       
+       let urlSessionTema = URLSession(configuration: URLSessionConfiguration.default)
+
+       let task = urlSessionTema.dataTask(with: url) {
+           data, response, error in
+
+           if error == nil {
+                let tema = Tema(withJsonData: data)
+                completion(tema)
              } else {
              completion(nil)
 
