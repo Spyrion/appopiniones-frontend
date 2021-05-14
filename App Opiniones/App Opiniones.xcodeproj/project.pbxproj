@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A29D14D264D77380077EFAC /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A29D14C264D77380077EFAC /* MessageTableViewCell.swift */; };
 		0A56642B264AB7F80075B7AA /* Tema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56642A264AB7F80075B7AA /* Tema.swift */; };
 		0A56642E264AB96F0075B7AA /* Mensaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56642D264AB96F0075B7AA /* Mensaje.swift */; };
 		43018A19262DF1C2006365A9 /* ListaTemasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43018A18262DF1C2006365A9 /* ListaTemasViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A29D14C264D77380077EFAC /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		0A56642A264AB7F80075B7AA /* Tema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tema.swift; sourceTree = "<group>"; };
 		0A56642D264AB96F0075B7AA /* Mensaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mensaje.swift; sourceTree = "<group>"; };
 		43018A18262DF1C2006365A9 /* ListaTemasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTemasViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				43018A20262DF39F006365A9 /* SeleccionTemaViewController.swift */,
 				43018A1C262DF25E006365A9 /* CrearTemaViewController.swift */,
 				43018A18262DF1C2006365A9 /* ListaTemasViewController.swift */,
+				0A29D14C264D77380077EFAC /* MessageTableViewCell.swift */,
 				DA9B889725FE9F6A00015873 /* AppDelegate.swift */,
 				DA9B889925FE9F6A00015873 /* SceneDelegate.swift */,
 				DA9B889B25FE9F6B00015873 /* ViewController.swift */,
@@ -190,6 +193,7 @@
 				0A56642E264AB96F0075B7AA /* Mensaje.swift in Sources */,
 				0A56642B264AB7F80075B7AA /* Tema.swift in Sources */,
 				DA4BD5C1262B5033007A4D8F /* UserDetailViewController.swift in Sources */,
+				0A29D14D264D77380077EFAC /* MessageTableViewCell.swift in Sources */,
 				DA9B889A25FE9F6A00015873 /* SceneDelegate.swift in Sources */,
 				43018A19262DF1C2006365A9 /* ListaTemasViewController.swift in Sources */,
 			);
