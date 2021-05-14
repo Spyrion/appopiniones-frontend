@@ -11,6 +11,7 @@ class LoginViewController: UIViewController {
 
     
     var token = ""
+    var id :Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()

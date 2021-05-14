@@ -20,13 +20,13 @@ class AjustesViewController: UIViewController {
     var token = ""
     
     var Login = LoginViewController()
-    var Register = RegisterViewController()
     var connection = Connection()
     
     var username : String = ""
     var password : String = ""
     var confirmpassword : String = ""
     
+  
     let optionKey = "OptionKey"
     let baseURLStringUsuarios = "localhost:8080/api/usuarios/"
     
@@ -34,12 +34,14 @@ class AjustesViewController: UIViewController {
         super.viewDidLoad()
         self.token = "\(Login.token)"
         GuardarDatos.isEnabled = true
-
-        connection.getDataAjustes(withId: Register.id ?? 0){ user in
+        
+        connection.getDataAjustes(withId: Login.id ?? 0){ user in
 
             self.username = user?.username ?? ""
             self.password = user?.password ?? ""
         }
+        
+        ConfirmPasswordField.text = String(PasswordField.text ?? "")
         
         if let switchValue = UserDefaults.standard.value(forKey: optionKey) as? Bool {
             
@@ -48,11 +50,11 @@ class AjustesViewController: UIViewController {
             
             SwitchMessages.isOn = false
         }
-
-        username = String(UsernameField.text ?? "")
-        password = String(PasswordField.text ?? "")
+        
+        UsernameField.text = username
+        PasswordField.text = password
+        ConfirmPasswordField.text = password
         confirmpassword = password
-        ConfirmPasswordField.text = confirmpassword
     
     
     if (ConfirmPasswordField.text != PasswordField.text) {
@@ -63,6 +65,7 @@ class AjustesViewController: UIViewController {
         
         GuardarDatos.isEnabled = true
     }
+        
         
     }
     
@@ -77,6 +80,7 @@ class AjustesViewController: UIViewController {
         vc.delegate = self
         vc.allowsEditing = true
         present(vc, animated: true)
+ 
     }
     
     @IBAction func Save(_ sender: Any) {
@@ -93,7 +97,7 @@ class AjustesViewController: UIViewController {
       
         // funcion PUT para ajustes
         
-        func putAjustes(withId id: Int, params: [AnyHashable: Any], completion: @escaping (_ user: User?) -> Void ) {
+        func putAjustes(withId  id : Int = Login.id ?? 0  ,  params: [AnyHashable: Any], completion: @escaping (_ user: User?) -> Void ) {
             guard let urlDataAjustes = URL(string: baseURLStringUsuarios + "\(id)/") else {
                completion(nil)
                return
@@ -101,9 +105,13 @@ class AjustesViewController: UIViewController {
            }
             var requestPUT = URLRequest(url: urlDataAjustes , cachePolicy: .useProtocolCachePolicy , timeoutInterval:  10 )
                          requestPUT.httpMethod = "PUT"
-                         requestPUT.addValue("application/json", forHTTPHeaderField: "content-type")
-                         requestPUT.httpBody = try? JSONEncoder().encode(jsonObject)
+                         requestPUT.addValue("application/json", forHTTPHeaderField: "Content-type")
+                         requestPUT.httpBody = try? JSONSerialization.data(withJSONObject: jsonObject, options: [])
+            
+            
             }
+        
+        
         }
         
     
@@ -118,13 +126,16 @@ class AjustesViewController: UIViewController {
 
 }
 
-extension AjustesViewController : UIImagePickerControllerDelegate , UINavigationControllerDelegate{
+extension AjustesViewController: UIImagePickerControllerDelegate , UINavigationControllerDelegate{
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info:
+                                [UIImagePickerController.InfoKey : Any]) {
         
         
-        if let imageNew = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+        if let imageNew = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as?
+            UIImage {
             UserImage.image = imageNew
+         
         }
         
         picker.dismiss(animated: true, completion: nil)
@@ -134,3 +145,4 @@ extension AjustesViewController : UIImagePickerControllerDelegate , UINavigation
         picker.dismiss(animated: true, completion: nil)
     }
 }
+
