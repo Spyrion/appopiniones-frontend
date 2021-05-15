@@ -14,6 +14,8 @@ class CrearTemaViewController: UIViewController {
     @IBOutlet weak var descripcionTextField: UITextField!
     @IBOutlet weak var categoriaTextField: UITextField!
     @IBOutlet weak var temaImageView: UIImageView!
+    @IBOutlet weak var seleccionImagen: UIButton!
+    @IBOutlet weak var crearTema: UIButton!
     
     // Objeto tema
     var tema: Tema?

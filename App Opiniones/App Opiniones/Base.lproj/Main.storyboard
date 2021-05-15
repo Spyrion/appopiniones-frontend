@@ -340,7 +340,9 @@
                     <tabBarItem key="tabBarItem" title="Crear tema" image="capslock.fill" catalog="system" id="4dj-wm-rpm"/>
                     <connections>
                         <outlet property="categoriaTextField" destination="rcr-fk-CFc" id="uCJ-0T-1nZ"/>
+                        <outlet property="crearTema" destination="3Hp-Dq-Nqn" id="YSe-Ea-avV"/>
                         <outlet property="descripcionTextField" destination="ghu-C2-UBv" id="CFo-bf-U0O"/>
+                        <outlet property="seleccionImagen" destination="35e-a2-K4N" id="eNC-u3-o4y"/>
                         <outlet property="temaImageView" destination="06h-27-4bh" id="Ic5-cv-Qxk"/>
                         <outlet property="tituloTextField" destination="NNa-XF-Kt3" id="lxb-mQ-dNQ"/>
                     </connections>
