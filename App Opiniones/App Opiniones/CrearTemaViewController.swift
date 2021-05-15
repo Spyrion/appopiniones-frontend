@@ -35,6 +35,9 @@ class CrearTemaViewController: UIViewController {
         }
     }
         
+    @IBAction func crearTema(_ sender: Any) {
+        guardarTema()
+    }
     func guardarTema() {
         // Comprobar que existan los varios datos introducidos y si están vacíos
         if let tituloTema = self.tituloTextField.text, !tituloTema.isEmpty,
