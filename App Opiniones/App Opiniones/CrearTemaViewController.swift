@@ -39,17 +39,40 @@ class CrearTemaViewController: UIViewController, UIImagePickerControllerDelegate
         guardarTema()
     }
     func guardarTema() {
+        let baseURLTema = "localhost:8080/api/temas/"
         // Comprobar que existan los varios datos introducidos y si están vacíos
         if let tituloTema = self.tituloTextField.text, !tituloTema.isEmpty,
            let descripcionTema = self.descripcionTextField.text, !descripcionTema.isEmpty,
            let categoriaTema = self.categoriaTextField.text, !categoriaTema.isEmpty {
-            // Crear nuevo objeto tema y asignarle los datos introducidos en los text fields
-            let newTema = Tema()
-            newTema.title = tituloTema
-            newTema.description = descripcionTema
-            newTema.category = categoriaTema
-            newTema.photo = "temaImageView.image"
-            self.tema = newTema
+            let jsonObject = """
+
+                                    {
+                                    "tituloTema" = "\(tituloTema)" ,
+                                    "descripcionTema" = "\(descripcionTema)" ,
+                                    "categoriaTema" = "\(categoriaTema)"
+                                    }
+
+                                    """
+                  
+    // Funcion POST del objeto JSON a la URL
+    func postTema( params: [AnyHashable: Any], completion: @escaping (_ tema: Tema?) -> Void ) {
+                            guard let urlDataAjustes = URL(string: baseURLTema) else {
+                                completion(nil)
+                               return
+                               
+                           }
+                            var requestPOST = URLRequest(url: urlDataAjustes , cachePolicy: .useProtocolCachePolicy , timeoutInterval:  10 )
+                                         requestPOST.httpMethod = "POST"
+                                         requestPOST.addValue("application/json", forHTTPHeaderField: "content-type")
+                                         requestPOST.httpBody = try? JSONEncoder().encode(jsonObject)
+                            }
+            // Pruebas: Asignación de valores a objeto para representación
+            // let newTema = Tema()
+            // newTema.title = tituloTema
+            // newTema.description = descripcionTema
+            // newTema.category = categoriaTema
+            // newTema.photo = "temaImageView.image"
+            // self.tema = newTema
         }
     }
     // Acción de selección de imagen
