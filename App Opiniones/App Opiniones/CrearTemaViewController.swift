@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CrearTemaViewController: UIViewController {
+class CrearTemaViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     // Outlets
     @IBOutlet weak var tituloTextField: UITextField!
@@ -48,7 +48,22 @@ class CrearTemaViewController: UIViewController {
             newTema.title = tituloTema
             newTema.description = descripcionTema
             newTema.category = categoriaTema
+            newTema.photo = "temaImageView.image"
             self.tema = newTema
         }
     }
+    // Acción de selección de imagen
+    @IBAction func seleccionImagen(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .photoLibrary
+        present(picker, animated: true, completion: nil)
+    }
+    // Función de representación de imagen seleccionada
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.originalImage] as! UIImage
+        temaImageView.image = image
+        dismiss(animated: true, completion: nil)
+    }
+    
 }

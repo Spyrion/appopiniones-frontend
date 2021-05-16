@@ -299,6 +299,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Seleccionar"/>
+                                <connections>
+                                    <action selector="seleccionImagen:" destination="Jyw-fk-XSQ" eventType="touchUpInside" id="bhQ-vM-y0A"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Hp-Dq-Nqn">
                                 <rect key="frame" x="114" y="452" width="186" height="36"/>
