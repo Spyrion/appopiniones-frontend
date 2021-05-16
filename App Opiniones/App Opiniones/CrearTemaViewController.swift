@@ -43,13 +43,15 @@ class CrearTemaViewController: UIViewController, UIImagePickerControllerDelegate
         // Comprobar que existan los varios datos introducidos y si están vacíos
         if let tituloTema = self.tituloTextField.text, !tituloTema.isEmpty,
            let descripcionTema = self.descripcionTextField.text, !descripcionTema.isEmpty,
-           let categoriaTema = self.categoriaTextField.text, !categoriaTema.isEmpty {
+           let categoriaTema = self.categoriaTextField.text, !categoriaTema.isEmpty,
+           let imagenTema = self.temaImageView.image {
             let jsonObject = """
 
                                     {
                                     "tituloTema" = "\(tituloTema)" ,
                                     "descripcionTema" = "\(descripcionTema)" ,
-                                    "categoriaTema" = "\(categoriaTema)"
+                                    "categoriaTema" = "\(categoriaTema)" ,
+                                    "imagenTema" = "\(imagenTema)"
                                     }
 
                                     """
