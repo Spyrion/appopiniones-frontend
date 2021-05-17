@@ -10,6 +10,7 @@ import UIKit
 class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
 
     public var position: Int = 0
+
     public var temas: [Tema2] = []
     public var connection = Connection()
     public var tema : Tema?
@@ -37,6 +38,7 @@ class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITab
         super.viewDidLoad()
         tableViewMessages.delegate = self
         tableViewMessages.dataSource = self
+
         //imageTema.image = UIImage(named: temas[position].imagenTema)
         //titleLabel.text = temas[position].titulo
         //descriptionLabel.text = temas[position].descripcionBreve
@@ -46,6 +48,7 @@ class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITab
             self.descriptionLabel.text = tema.description
             self.membersLabel.text = "Miembros: "+String((tema.mensaje.count))
         }
+
         buttonFavorite.layer.cornerRadius = 15
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -86,7 +89,7 @@ class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITab
                                            y: 10,
                                            width: holder.frame.size.width-20,
                                            height: holder.frame.size.width-20)
-        descriptionTextView.text = tema.descripcionBreve
+        descriptionTextView.text = tema.description
         holder.addSubview(descriptionTextView)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
