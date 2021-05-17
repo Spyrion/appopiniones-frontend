@@ -11,7 +11,7 @@ class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITab
 
     public var position: Int = 0
 
-    public var temas: [Tema2] = []
+    public var temas = [Tema]()
     public var connection = Connection()
     public var tema : Tema?
 
