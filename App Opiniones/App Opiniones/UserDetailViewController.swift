@@ -14,24 +14,22 @@ class UserDetailViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var creationDateLabel: UILabel!
     @IBOutlet weak var numberMessagesLabel: UILabel!
 
+    // Falta recuperar los datos que manda la pantalla anterior
+    var id = ""
+    var name = "AitorTilla"
+    var creationDate = "01/01/2020"
+    var numberMessages = 20
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         userDetailImageView.layer.cornerRadius = 120
         
-        
-        
-        // TODO: recuperar el nombre del usuario
-        userNameLabel.text = "AitorTilla"
-        
-        // TODO: recuperar la fecha
-        creationDateLabel.text = "Creado el 01/01/2020"
-        
-        // TODO: recuperar el número de mensajes
-        numberMessagesLabel.text = "140 mensajes"
+        userNameLabel.text = "\(self.name)"
+        creationDateLabel.text = "Creado el \(self.creationDate)"
+        numberMessagesLabel.text = "\(self.numberMessages) mensajes"
+        // FALTA userDetailImageView
     }
-    
-
 
 }
