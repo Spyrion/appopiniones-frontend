@@ -14,6 +14,7 @@ class User :  Mappable{
     var password :String?
     var messages : Int?
     var photo : String?
+    var creationDate : Date?
     var tema : Tema?
     var mensaje :  Mensaje?
     
@@ -24,6 +25,7 @@ class User :  Mappable{
         case password = "password"
         case messages = "messages"
         case photo = "photo"
+        case creationDate = "creationDate"
         case tema = "tema"
         case mensaje = "mensaje"
     }

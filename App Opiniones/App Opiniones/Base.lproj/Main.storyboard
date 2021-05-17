@@ -419,7 +419,7 @@
                                 <rect key="frame" x="0.0" y="249" width="414" height="613"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="miCelda" rowHeight="122" id="RbC-wq-vEP">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="miCelda" rowHeight="122" id="RbC-wq-vEP" customClass="MessageTableViewCell" customModule="App_Opiniones" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="122"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RbC-wq-vEP" id="3MX-Pv-zsg">
@@ -479,7 +479,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="zqy-oi-40D" kind="show" id="xZv-aA-73c"/>
+                                            <outlet property="buttonDeleteMessage" destination="xgh-3c-RMT" id="llU-vJ-PKR"/>
+                                            <outlet property="buttonEditMessage" destination="D6v-7W-o1R" id="yJM-ix-Kh4"/>
+                                            <outlet property="imageUser" destination="Gqo-ME-X8A" id="p1e-sJ-2Wc"/>
+                                            <outlet property="messageUser" destination="jHz-aq-5eg" id="Nzd-Hn-1DJ"/>
+                                            <segue destination="zqy-oi-40D" kind="show" identifier="segueUser" id="xZv-aA-73c"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -630,6 +634,8 @@
                         <outlet property="descriptionLabel" destination="ZWs-Of-TSz" id="99w-b1-CKn"/>
                         <outlet property="holder" destination="sRs-ol-im9" id="wkT-UQ-x9k"/>
                         <outlet property="imageTema" destination="bio-Lg-Yfp" id="loP-kW-9yg"/>
+                        <outlet property="membersLabel" destination="dw5-Nu-NmV" id="BTO-x3-HjK"/>
+                        <outlet property="messagetextLabel" destination="bZe-pC-a6q" id="3hb-tD-8jn"/>
                         <outlet property="tableViewMessages" destination="She-vw-2hd" id="x1D-zo-JYO"/>
                         <outlet property="titleLabel" destination="w3h-G3-jOo" id="Tle-LI-fB5"/>
                         <outlet property="viewMessage" destination="igo-8O-VCd" id="lsH-Qk-9wD"/>

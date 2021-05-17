@@ -13,8 +13,8 @@ class Tema : Mappable {
     var description : String?
     var category : String?
     var photo : String?
-    var usuario : User?
-    var mensaje : Mensaje?
+    var usuario : [User?]
+    var mensaje : [Mensaje?]
     
     private enum CodingKeys : String , CodingKey {
         

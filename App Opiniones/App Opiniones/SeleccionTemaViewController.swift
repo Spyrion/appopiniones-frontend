@@ -10,8 +10,11 @@ import UIKit
 class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
 
     public var position: Int = 0
-    var temas = [Tema]()
-    
+
+    public var temas: [Tema2] = []
+    public var connection = Connection()
+    public var tema : Tema?
+
     //este holder se ocupará de que los elementos de la vista estén contenidos en la misma siempre para diferentes dispositivos
     @IBOutlet var holder: UIView!
     @IBOutlet weak var tableViewMessages: UITableView!
@@ -21,6 +24,8 @@ class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITab
     @IBOutlet weak var buttonFavorite: UIButton!
     @IBOutlet weak var imageTema: UIImageView!
     @IBOutlet weak var viewMessage: UIView!
+    @IBOutlet weak var membersLabel: UILabel!
+    @IBOutlet weak var messagetextLabel: UITextView!
     //para mostrar la 'descripcionBreve' del Tema dentro del hilo de mensajes
     private let descriptionTextView: UILabel = {
         let label = UILabel()
@@ -33,20 +38,34 @@ class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITab
         super.viewDidLoad()
         tableViewMessages.delegate = self
         tableViewMessages.dataSource = self
-        imageTema.image = UIImage(named: temas[position].photo ?? "No Picture")
-        titleLabel.text = temas[position].title
-        descriptionLabel.text = temas[position].description
+
+        //imageTema.image = UIImage(named: temas[position].imagenTema)
+        //titleLabel.text = temas[position].titulo
+        //descriptionLabel.text = temas[position].descripcionBreve
+        if let tema = tema {
+            self.imageTema.image = UIImage(named: tema.photo!)
+            self.titleLabel.text = tema.title
+            self.descriptionLabel.text = tema.description
+            self.membersLabel.text = "Miembros: "+String((tema.mensaje.count))
+        }
+
         buttonFavorite.layer.cornerRadius = 15
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return (tema?.mensaje.count)!
     }
     
     //cada celda de las filas será un tema, para ello haremos un 'dequeue' del tableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "miCelda", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "miCelda", for: indexPath) as! MessageTableViewCell
         
         //configuramos los campos que apareceran de cada tema
+        if let mensaje = tema?.mensaje[indexPath.row]{
+            cell.messageUser.text = mensaje.body
+        }
+        if let user = tema?.usuario[indexPath.row]{
+            cell.imageUser.image = UIImage(named: user.photo!)
+        }
         
         return cell
     }
@@ -73,9 +92,57 @@ class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITab
         descriptionTextView.text = tema.description
         holder.addSubview(descriptionTextView)
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueUser" {
+            if let indexPath = self.tableViewMessages.indexPathForSelectedRow {
+                let user = self.tema?.usuario[indexPath.row]
+                let userdetailViewController = segue.destination as! UserDetailViewController
+                let username = user?.username
+                let userimage = user?.photo
+                let dataFormatter = DateFormatter()
+                dataFormatter.dateStyle = .short
+                dataFormatter.timeStyle = .none
+                let creationdate = dataFormatter.string(for: user?.creationDate)
+                let messages = user?.messages
+                
+                userdetailViewController.userNameLabel.text = username
+                userdetailViewController.userDetailImageView.image = UIImage(named: userimage!)
+                userdetailViewController.creationDateLabel.text = creationdate
+                userdetailViewController.numberMessagesLabel.text = String(messages!)
+            }
+        }
+    }
     
     @IBAction func SendMessage(_ sender: Any) {
+        let baseURLMensaje = ""
+        if let body = messagetextLabel.text, !body.isEmpty {
+            let jsonObject = """
+
+                            {
+                            "body" = \(body) ,
+                            "usuario" = "falta resolver el usuario que lo escribe" ,
+                            "tema" = "\(tema)"
+                            }
+
+                            """
+          
+            // funcion PUT para ajustes
+            
+            func postMensaje( params: [AnyHashable: Any], completion: @escaping (_ mensaje: Mensaje?) -> Void ) {
+                guard let urlDataAjustes = URL(string: baseURLMensaje) else {
+                   completion(nil)
+                   return
+                   
+               }
+                var requestPOST = URLRequest(url: urlDataAjustes , cachePolicy: .useProtocolCachePolicy , timeoutInterval:  10 )
+                             requestPOST.httpMethod = "POST"
+                             requestPOST.addValue("application/json", forHTTPHeaderField: "content-type")
+                             requestPOST.httpBody = try? JSONEncoder().encode(jsonObject)
+                }
+        }
+        
         viewMessage.isHidden = false
+        
     }
     
     @IBAction func sendViewMessage(_ sender: Any) {
