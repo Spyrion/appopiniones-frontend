@@ -97,18 +97,7 @@ class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITab
             if let indexPath = self.tableViewMessages.indexPathForSelectedRow {
                 let user = self.tema?.usuario[indexPath.row]
                 let userdetailViewController = segue.destination as! UserDetailViewController
-                let username = user?.username
-                let userimage = user?.photo
-                let dataFormatter = DateFormatter()
-                dataFormatter.dateStyle = .short
-                dataFormatter.timeStyle = .none
-                let creationdate = dataFormatter.string(for: user?.creationDate)
-                let messages = user?.messages
-                
-                userdetailViewController.userNameLabel.text = username
-                userdetailViewController.userDetailImageView.image = UIImage(named: userimage!)
-                userdetailViewController.creationDateLabel.text = creationdate
-                userdetailViewController.numberMessagesLabel.text = String(messages!)
+                userdetailViewController.user = user
             }
         }
     }

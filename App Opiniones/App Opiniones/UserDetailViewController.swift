@@ -13,23 +13,25 @@ class UserDetailViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var creationDateLabel: UILabel!
     @IBOutlet weak var numberMessagesLabel: UILabel!
-
-    // Falta recuperar los datos que manda la pantalla anterior
-    var id = ""
-    var name = "AitorTilla"
-    var creationDate = "01/01/2020"
-    var numberMessages = 20
-
+    
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         userDetailImageView.layer.cornerRadius = 120
         
-        userNameLabel.text = "\(self.name)"
-        creationDateLabel.text = "Creado el \(self.creationDate)"
-        numberMessagesLabel.text = "\(self.numberMessages) mensajes"
-        // FALTA userDetailImageView
+        if let username = user?.username, let userimage = user?.photo, let creationDate = user?.creationDate, let messages = user?.messages {
+            
+            let dataFormatter = DateFormatter()
+            dataFormatter.dateStyle = .short
+            dataFormatter.timeStyle = .none
+            let creationDateString = dataFormatter.string(for: creationDate)
+            
+            userNameLabel.text = username
+            userDetailImageView.image = UIImage(named: userimage)
+            creationDateLabel.text = "Creado el \(creationDateString ?? "")"
+            numberMessagesLabel.text = "\(String(messages)) mensajes"
+        }
     }
-
 }
