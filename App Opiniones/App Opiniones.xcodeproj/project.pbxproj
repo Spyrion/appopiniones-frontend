@@ -27,6 +27,7 @@
 		DA9B889F25FE9F6B00015873 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA9B889D25FE9F6B00015873 /* Main.storyboard */; };
 		DA9B88A125FE9F6C00015873 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9B88A025FE9F6C00015873 /* Assets.xcassets */; };
 		DA9B88A425FE9F6C00015873 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA9B88A225FE9F6C00015873 /* LaunchScreen.storyboard */; };
+		EEF8D8CF26545C6C00824FFF /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF8D8CE26545C6C00824FFF /* Session.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		DA9B88A025FE9F6C00015873 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA9B88A325FE9F6C00015873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA9B88A525FE9F6C00015873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEF8D8CE26545C6C00824FFF /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				0A56642D264AB96F0075B7AA /* Mensaje.swift */,
 				43A763432641A161000F5086 /* User.swift */,
 				435AF5822649856500BE3328 /* Connection.swift */,
+				EEF8D8CE26545C6C00824FFF /* Session.swift */,
 			);
 			path = "App Opiniones";
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				435AF5832649856500BE3328 /* Connection.swift in Sources */,
+				EEF8D8CF26545C6C00824FFF /* Session.swift in Sources */,
 				437B5C2E262D96550064B2EA /* LoginViewController.swift in Sources */,
 				437B5C31262D96660064B2EA /* RegisterViewController.swift in Sources */,
 				43018A1D262DF25E006365A9 /* CrearTemaViewController.swift in Sources */,

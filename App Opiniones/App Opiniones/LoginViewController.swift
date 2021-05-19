@@ -13,10 +13,15 @@ class LoginViewController: UIViewController {
     var token = ""
     var id :Int?
     
+    @IBOutlet weak var NombreUsuario: UITextField!
+    @IBOutlet weak var Contrasena: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        Session.current.userName = "User"
+        Session.current.token = "onetoken"
+        Session.save()        // Do any additional setup after loading the view.
     }
     
 

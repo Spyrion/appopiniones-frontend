@@ -59,4 +59,27 @@ class Connection : Mappable {
        task.resume()
        }
     
+    func getUsuarios(completion: @escaping (_ user: User?) -> Void) {
+    guard let url = URL(string: baseURLStringUsuarios) else {
+       completion(nil)
+       return
+       
+   }
+       
+       let urlSessionUser = URLSession(configuration: URLSessionConfiguration.default)
+
+       let task = urlSessionUser.dataTask(with: url) {
+           data, response, error in
+
+           if error == nil {
+                let user = User(withJsonData: data)
+                completion(user)
+             } else {
+             completion(nil)
+
+             }
+       }
+       task.resume()
+       }
+    
 }
