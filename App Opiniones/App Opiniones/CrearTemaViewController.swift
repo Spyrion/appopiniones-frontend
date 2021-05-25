@@ -22,6 +22,14 @@ class CrearTemaViewController: UIViewController, UIImagePickerControllerDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert , .sound , .badge]) { (granted , error) in
+            if granted {
+                print("nos han dado permiso")
+            } else {
+                print("no nos han dado permiso")
+                print(error)
+            }
+        }
 
         // Esconder teclado al presionar en cualquier lugar de la pantalla.
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
@@ -68,13 +76,18 @@ class CrearTemaViewController: UIViewController, UIImagePickerControllerDelegate
                                          requestPOST.addValue("application/json", forHTTPHeaderField: "content-type")
                                          requestPOST.httpBody = try? JSONEncoder().encode(jsonObject)
                             }
-            // Pruebas: Asignación de valores a objeto para representación
-            // let newTema = Tema()
-            // newTema.title = tituloTema
-            // newTema.description = descripcionTema
-            // newTema.category = categoriaTema
-            // newTema.photo = "temaImageView.image"
-            // self.tema = newTema
+          
+            
+            let content = UNMutableNotificationContent()
+            content.title = ""
+            content.body = ""
+            content.sound = .default
+            
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
+            let request = UNNotificationRequest(identifier: "tema creado" , content : content , trigger: trigger )
+            UNUserNotificationCenter.current().add(request) {(error) in
+                print (error)
+            }
         }
     }
     // Acción de selección de imagen
