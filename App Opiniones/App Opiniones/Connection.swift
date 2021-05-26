@@ -11,7 +11,7 @@ class Connection : Mappable {
     
     // funcion get para ajustes
     let baseURLStringUsuarios = "localhost:8080/api/usuarios/"
-    let baseUrlStringTemas = ""
+    let baseUrlStringTemas = "localhost:8080/api/temas/"
     
     func getDataAjustes(withId id: Int  , completion: @escaping (_ user: User?) -> Void) {
     guard let urlDataAjustes = URL(string: baseURLStringUsuarios + "\(id)/") else {

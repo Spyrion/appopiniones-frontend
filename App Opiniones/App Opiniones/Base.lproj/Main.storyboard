@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K4d-h0-8ah">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K4d-h0-8ah">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -452,6 +452,9 @@
                                                     <state key="normal">
                                                         <imageReference key="image" image="trash.fill" catalog="system" symbolScale="large"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="deleteMessage:" destination="5uV-ae-MdO" eventType="touchUpInside" id="Qk2-iT-88L"/>
+                                                    </connections>
                                                 </button>
                                                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6v-7W-o1R">
                                                     <rect key="frame" x="374" y="81" width="30" height="30"/>
@@ -460,6 +463,9 @@
                                                         <constraint firstAttribute="width" constant="30" id="VL8-9P-DT0"/>
                                                     </constraints>
                                                     <state key="normal" title="Edit"/>
+                                                    <connections>
+                                                        <action selector="editMessage:" destination="5uV-ae-MdO" eventType="touchUpInside" id="HQV-oJ-9gg"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -635,6 +641,7 @@
                         <outlet property="holder" destination="sRs-ol-im9" id="wkT-UQ-x9k"/>
                         <outlet property="imageTema" destination="bio-Lg-Yfp" id="loP-kW-9yg"/>
                         <outlet property="membersLabel" destination="dw5-Nu-NmV" id="BTO-x3-HjK"/>
+                        <outlet property="messagesLabel" destination="XJW-nn-USg" id="IEZ-1W-oJY"/>
                         <outlet property="messagetextLabel" destination="bZe-pC-a6q" id="3hb-tD-8jn"/>
                         <outlet property="tableViewMessages" destination="She-vw-2hd" id="x1D-zo-JYO"/>
                         <outlet property="titleLabel" destination="w3h-G3-jOo" id="Tle-LI-fB5"/>

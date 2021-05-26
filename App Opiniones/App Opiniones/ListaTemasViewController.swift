@@ -89,8 +89,8 @@ class ListaTemasViewController: UIViewController, UITableViewDelegate, UITableVi
         guard let vc = storyboard?.instantiateViewController(identifier: "hilo") as? SeleccionTemaViewController else {
             return
         }
-        vc.temas = temas
-        vc.position = position
+        vc.tema = temas[position]
+        
         present(vc, animated: true)
     }
     
