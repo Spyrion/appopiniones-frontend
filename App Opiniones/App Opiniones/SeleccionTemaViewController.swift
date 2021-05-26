@@ -27,6 +27,7 @@ class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITab
     @IBOutlet weak var membersLabel: UILabel!
     @IBOutlet weak var messagetextLabel: UITextView!
     //para mostrar la 'descripcionBreve' del Tema dentro del hilo de mensajes
+    @IBOutlet weak var messagesLabel: UILabel!
     private let descriptionTextView: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -46,7 +47,8 @@ class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITab
             self.imageTema.image = UIImage(named: tema.photo!)
             self.titleLabel.text = tema.title
             self.descriptionLabel.text = tema.description
-            self.membersLabel.text = "Miembros: "+String((tema.mensaje.count))
+            self.membersLabel.text = "Miembros: "+String((tema.usuario.count))
+            self.messagesLabel.text = "Respuestas: "+String(tema.mensaje.count)
         }
 
         buttonFavorite.layer.cornerRadius = 15
@@ -75,7 +77,7 @@ class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITab
         return 130
     }
     //hacemos un override de esta función para que se muestren los elementos de la función 'configurePosts()' a través del 'holder' creado
-    override func viewDidLayoutSubviews() {
+    /*override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if holder.subviews.count == 0 {
             configurePosts()
@@ -91,7 +93,7 @@ class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITab
                                            height: holder.frame.size.width-20)
         descriptionTextView.text = tema.description
         holder.addSubview(descriptionTextView)
-    }
+    }*/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueUser" {
             if let indexPath = self.tableViewMessages.indexPathForSelectedRow {
@@ -103,14 +105,20 @@ class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITab
     }
     
     @IBAction func SendMessage(_ sender: Any) {
-        let baseURLMensaje = ""
+        
+        viewMessage.isHidden = false
+        
+    }
+    
+    @IBAction func sendViewMessage(_ sender: Any) {
+        let baseURLMensaje = "localhost:8080/api/mensajes/"
         if let body = messagetextLabel.text, !body.isEmpty {
             let jsonObject = """
 
                             {
                             "body" = \(body) ,
                             "usuario" = "falta resolver el usuario que lo escribe" ,
-                            "tema" = "\(tema)"
+                            "tema" = "\(String(describing: tema))"
                             }
 
                             """
@@ -129,16 +137,14 @@ class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITab
                              requestPOST.httpBody = try? JSONEncoder().encode(jsonObject)
                 }
         }
-        
-        viewMessage.isHidden = false
-        
-    }
-    
-    @IBAction func sendViewMessage(_ sender: Any) {
         viewMessage.isHidden = true
     }
     @IBAction func cancelViewMessage(_ sender: Any) {
         viewMessage.isHidden = true
+    }
+    @IBAction func deleteMessage(_ sender: Any) {
+    }
+    @IBAction func editMessage(_ sender: Any) {
     }
 }
 
