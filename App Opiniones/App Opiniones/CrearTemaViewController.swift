@@ -79,8 +79,8 @@ class CrearTemaViewController: UIViewController, UIImagePickerControllerDelegate
           
             
             let content = UNMutableNotificationContent()
-            content.title = ""
-            content.body = ""
+            content.title = "AppOpiniones"
+            content.body = "¡Se ha creado el tema con exito!"
             content.sound = .default
             
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
