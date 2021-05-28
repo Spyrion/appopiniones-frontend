@@ -49,17 +49,19 @@ class CrearTemaViewController: UIViewController, UIImagePickerControllerDelegate
     func guardarTema() {
         let baseURLTema = "localhost:8080/api/temas/"
         // Comprobar que existan los varios datos introducidos y si están vacíos
-        if let tituloTema = self.tituloTextField.text, !tituloTema.isEmpty,
-           let descripcionTema = self.descripcionTextField.text, !descripcionTema.isEmpty,
-           let categoriaTema = self.categoriaTextField.text, !categoriaTema.isEmpty,
-           let imagenTema = self.temaImageView.image {
+        if let title = self.tituloTextField.text, !title.isEmpty,
+           let description = self.descripcionTextField.text, !description.isEmpty,
+           let category = self.categoriaTextField.text, !category.isEmpty,
+           let photo = self.temaImageView.image {
             let jsonObject = """
 
                                     {
-                                    "tituloTema" = "\(tituloTema)" ,
-                                    "descripcionTema" = "\(descripcionTema)" ,
-                                    "categoriaTema" = "\(categoriaTema)" ,
-                                    "imagenTema" = "\(imagenTema)"
+                                    "title" = "\(title)" ,
+                                    "description" = "\(description)" ,
+                                    "category" = "\(category)" ,
+                                    "photo" = "\(photo)" ,
+                                    "usuario" = "username" ,
+                                    "mensajes" = null
                                     }
 
                                     """
