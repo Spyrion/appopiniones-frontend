@@ -15,8 +15,8 @@ class User :  Mappable{
     var messages : Int?
     var photo : String?
     var creationDate : Date?
-    var tema : Tema?
-    var mensaje :  Mensaje?
+    var tema : [Tema?]
+    var mensaje :  [Mensaje?]
     
     private enum CodingKeys : String , CodingKey {
         
