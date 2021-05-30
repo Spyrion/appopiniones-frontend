@@ -311,7 +311,6 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Crear"/>
                                 <connections>
-                                    <action selector="crearTema:" destination="Jyw-fk-XSQ" eventType="touchUpInside" id="PUX-iY-ZGB"/>
                                     <segue destination="qA3-uY-Kjq" kind="unwind" identifier="guardarTema" unwindAction="guardarWithSegue:" id="cbU-uo-fDB"/>
                                 </connections>
                             </button>

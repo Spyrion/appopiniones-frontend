@@ -42,10 +42,7 @@ class CrearTemaViewController: UIViewController, UIImagePickerControllerDelegate
             guardarTema()
         }
     }
-        
-    @IBAction func crearTema(_ sender: Any) {
-        guardarTema()
-    }
+
     func guardarTema() {
         let baseURLTema = "localhost:8080/api/temas/"
         // Comprobar que existan los varios datos introducidos y si están vacíos
@@ -79,7 +76,7 @@ class CrearTemaViewController: UIViewController, UIImagePickerControllerDelegate
                                          requestPOST.httpBody = try? JSONEncoder().encode(jsonObject)
                             }
           
-            
+            // Notificación
             let content = UNMutableNotificationContent()
             content.title = "AppOpiniones"
             content.body = "¡Se ha creado el tema con exito!"
@@ -92,6 +89,7 @@ class CrearTemaViewController: UIViewController, UIImagePickerControllerDelegate
             }
         }
     }
+
     // Acción de selección de imagen
     @IBAction func seleccionImagen(_ sender: Any) {
         let picker = UIImagePickerController()
