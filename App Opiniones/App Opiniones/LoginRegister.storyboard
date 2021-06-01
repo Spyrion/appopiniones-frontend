@@ -118,6 +118,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="InicioSesion:" destination="FY5-IV-sfJ" eventType="touchUpInside" id="s1j-y0-mA0"/>
                                                     <segue destination="ogM-eW-r6H" kind="presentation" modalPresentationStyle="fullScreen" id="7m0-pX-ace"/>
                                                 </connections>
                                             </button>

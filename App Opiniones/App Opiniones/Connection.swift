@@ -59,7 +59,7 @@ class Connection : Mappable {
        task.resume()
        }
     
-    func getUsuarios(completion: @escaping (_ user: User?) -> Void) {
+    func getUsuarios(completion: @escaping (_ user: UserList?) -> Void) {
     guard let url = URL(string: baseURLStringUsuarios) else {
        completion(nil)
        return
@@ -72,7 +72,7 @@ class Connection : Mappable {
            data, response, error in
 
            if error == nil {
-                let user = User(withJsonData: data)
+                let user = UserList(withJsonData: data)
                 completion(user)
              } else {
              completion(nil)
