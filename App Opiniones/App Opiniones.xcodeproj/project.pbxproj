@@ -27,6 +27,7 @@
 		DA9B889F25FE9F6B00015873 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA9B889D25FE9F6B00015873 /* Main.storyboard */; };
 		DA9B88A125FE9F6C00015873 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9B88A025FE9F6C00015873 /* Assets.xcassets */; };
 		DA9B88A425FE9F6C00015873 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA9B88A225FE9F6C00015873 /* LaunchScreen.storyboard */; };
+		EEC4F72D2666ACBE001C3634 /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC4F72C2666ACBE001C3634 /* UserList.swift */; };
 		EEF8D8CF26545C6C00824FFF /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF8D8CE26545C6C00824FFF /* Session.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		DA9B88A025FE9F6C00015873 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA9B88A325FE9F6C00015873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA9B88A525FE9F6C00015873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEC4F72C2666ACBE001C3634 /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
 		EEF8D8CE26545C6C00824FFF /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 				43A763432641A161000F5086 /* User.swift */,
 				435AF5822649856500BE3328 /* Connection.swift */,
 				EEF8D8CE26545C6C00824FFF /* Session.swift */,
+				EEC4F72C2666ACBE001C3634 /* UserList.swift */,
 			);
 			path = "App Opiniones";
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				DA9B889C25FE9F6B00015873 /* ViewController.swift in Sources */,
 				43A763442641A161000F5086 /* User.swift in Sources */,
 				DA9B889825FE9F6A00015873 /* AppDelegate.swift in Sources */,
+				EEC4F72D2666ACBE001C3634 /* UserList.swift in Sources */,
 				43A7634126419805000F5086 /* Mappable.swift in Sources */,
 				0A56642E264AB96F0075B7AA /* Mensaje.swift in Sources */,
 				0A56642B264AB7F80075B7AA /* Tema.swift in Sources */,
