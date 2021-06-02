@@ -14,6 +14,8 @@ class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITab
     public var temas = [Tema]()
     public var connection = Connection()
     public var tema : Tema?
+    public var userlogin: User?
+    public var vcLogin = LoginViewController()
 
     //este holder se ocupará de que los elementos de la vista estén contenidos en la misma siempre para diferentes dispositivos
     @IBOutlet var holder: UIView!
@@ -50,6 +52,10 @@ class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITab
             self.membersLabel.text = "Miembros: "+String((tema.usuario.count))
             self.messagesLabel.text = "Respuestas: "+String(tema.mensaje.count)
         }
+        connection.getDataAjustes(withId: vcLogin.id ?? 0){ user in
+            
+            self.userlogin = user
+        }
 
         buttonFavorite.layer.cornerRadius = 15
     }
@@ -67,6 +73,15 @@ class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITab
         }
         if let user = tema?.usuario[indexPath.row]{
             cell.imageUser.image = UIImage(named: user.photo!)
+        }
+        let listamensajes = userlogin?.mensaje
+        
+        for i in listamensajes! {
+            if i?.body == tema?.mensaje[indexPath.row]?.body{
+                cell.buttonDeleteMessage.isHidden = false
+                cell.buttonEditMessage.isHidden = false
+            }
+            
         }
         
         return cell
@@ -117,13 +132,13 @@ class SeleccionTemaViewController: UIViewController , UITableViewDelegate, UITab
 
                             {
                             "body" = \(body) ,
-                            "usuario" = "falta resolver el usuario que lo escribe" ,
+                            "usuario" = \(String(describing: userlogin)) ,
                             "tema" = "\(String(describing: tema))"
                             }
 
                             """
           
-            // funcion PUT para ajustes
+            // funcion POST enviar un mensaje
             
             func postMensaje( params: [AnyHashable: Any], completion: @escaping (_ mensaje: Mensaje?) -> Void ) {
                 guard let urlDataAjustes = URL(string: baseURLMensaje) else {
